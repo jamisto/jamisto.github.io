@@ -1,0 +1,162 @@
+body{
+	margin:0 auto;
+	max-width:63.5rem;
+	background-image:url(../img/bg3.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size:cover;
+}
+article,header{
+	padding-top:2%;
+	padding-bottom:2%;
+	padding-left:1%;
+	padding-right:1%;
+	background-color:rgba(227, 227, 227, 0.433);
+	color:black;
+}
+footer{
+	text-align:left;
+	background-color:rgba(227, 227, 227, 0.433);
+	padding-right:1%;
+	padding-left:1%;
+	padding-bottom:1%;
+	padding-top:1%;
+
+}
+#logo{
+	text-align:center;
+	font-size:6em;
+	font-family: 'Share Tech Mono', monospace;
+	color:#363636;
+}
+h1,h2,h3,h4{
+	font-family: 'Share Tech Mono', monospace;
+	color:#363636;
+	padding-left: 1%;
+	padding-right:1%;
+}
+h5{
+	font-family: 'Share Tech Mono', monospace;
+	color:#363636;
+	padding-top:3%;
+	padding-bottom:3%;
+	text-align: left;
+	font-size:1.5rem;
+	margin-bottom:0%;
+}
+.valikko{
+	text-align:center;
+	font-family: 'Share Tech Mono', monospace;
+	font-size:2rem;
+}
+.valikko a{
+	color:#363636;
+}
+.valikko a:hover{
+	color:rgb(14, 129, 158);
+}
+.kieli {
+	float:right;
+	text-align:center;
+	font-family: 'Share Tech Mono', monospace;
+}
+.kieli a{
+	color:#363636;
+}
+.kieli a:hover{
+	color:rgb(14, 129, 158);
+}
+.esittely{
+	text-align:center;
+	padding-top:1%;
+}
+.profiili{
+	width:10rem;
+	height:10rem;
+	padding-top:1%;
+}
+.kuvake{
+	width:5rem;
+	height:5rem;
+}
+
+.columns{
+	padding-left:1%;
+	padding-right:1%;
+}
+#map{
+	width: 100%;
+	height: 200px;
+}
+.fa {
+	padding: 1%;
+	font-size: 1rem;
+	width:24px;
+	text-align:center;
+	text-decoration:none;
+}
+.fa-facebook {
+	background: #3B5998;
+    color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.some {
+	list-style-type: none;
+	font-size:1rem;
+	margin-left:0px;
+	margin-bottom:0px;
+	padding-bottom:3%;
+}
+
+
+/* peli.css liitetty tähän*/
+.div3 {
+	float: left;
+	padding-top:1%;
+	padding-bottom:1%;
+	padding-left:1%;
+	padding-right:1%;
+	width: 35%;
+	height: auto;
+
+}
+
+.kuvaus {
+	padding-top:1%;
+	padding-bottom:1%;
+	padding-left:1%;
+	padding-right:1%;
+	overflow: auto;
+}
+
+.osta {
+	margin-top:5%;
+	width:60%;
+	height:190px;
+}
+@media only screen and (max-width: 650px) {
+    .kuvaus p{
+        text-align:center;
+		padding:0%;
+		padding-bottom:10%;
+	}
+	
+	.kuvaus h4{
+		font-size:2rem;
+		text-align:center;
+	}
+	
+	.div3{
+		float:none;
+		position:relative;
+		margin-left:25%;
+		width:50%
+	}
+}
