@@ -21,7 +21,6 @@ footer{
 	padding-left:1%;
 	padding-bottom:1%;
 	padding-top:1%;
-
 }
 #logo{
 	text-align:center;
@@ -43,6 +42,15 @@ h5{
 	text-align: left;
 	font-size:1.5rem;
 	margin-bottom:0%;
+}
+h6{
+	font-family: 'Share Tech Mono', monospace;
+	color:#363636;
+	padding-top:1%;
+	padding-bottom:0%;
+	font-size:0.7rem;
+	margin-bottom:0%;
+	text-align: center;
 }
 .valikko{
 	text-align:center;
@@ -79,7 +87,6 @@ h5{
 	width:5rem;
 	height:5rem;
 }
-
 .columns{
 	padding-left:1%;
 	padding-right:1%;
@@ -114,7 +121,6 @@ h5{
 	margin-bottom:0px;
 	padding-bottom:3%;
 }
-
 
 /* peli.css liitetty tähän*/
 .div3 {
@@ -158,5 +164,8 @@ h5{
 		position:relative;
 		margin-left:25%;
 		width:50%
+	}
+	.osta {
+		width: 80%;
 	}
 }
