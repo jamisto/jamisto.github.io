@@ -161,7 +161,9 @@ h6{
 		font-size:1.9rem;
 		text-align:center;
 	}
-	
+	article {
+		padding-top:2rem;
+	}
 	.div3{
 		float:none;
 		position:relative;
