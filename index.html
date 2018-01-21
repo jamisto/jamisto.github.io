@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html class="no-js" lang="fi" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -13,20 +13,96 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/oma.css">
   </head>
 <body>
 
-<article class="row">
-<div class="large-6 columns">
-<h1>Malli Sivu Laamanen<h1>
+<header class="row">
+
+	<div class="large-12 medium-12 small-12 columns">
+		<ul class="kieli vertical medium-horizontal menu">
+			<li><a href="in_english.html"><i class="kieli"></i> <span>In English</span></a></li>
+		</ul>
+	</div>
+	
+	<div class="large-12 medium-12 small-12 columns">
+	<h1 id="logo">Laama Tech</h1>
+	</div>
+	
+	<div class="large-12 medium-12 columns">
+		<ul class="valikko vertical medium-horizontal menu">
+		  <li><a href="#0"><i class="fi-list"></i> <span>Etusivu</span></a></li>
+		  <li><a href="pelit.html"><i class="fi-list"></i> <span>Pelit</span></a></li>
+		  <li><a href="meista.html"><i class="fi-list"></i> <span>Meistä</span></a></li>
+		</ul>
+	</div>
+	
+</header>
+
+<article>
+<div class="row">
+<h3>Mikä on Laama Tech?</h3>
+	<p class="large-12 medium-12 columns">
+	Laama Tech on pelialan kasvava yritys, jonka erikoisalaa ovat 2D-tasoloikkapelit. 
+	Yrityksemme perustettiin jo lokakuussa 2017, 
+	ja työllistämme lähes 11 suomalaista IT-alan osaajaa. 
+	Arvioitu liikevaihtomme vuodelle 2017 on 15 000 euroa (Kelan maksamat tuet 
+	[kunnes Kela näkee tämän, ja vie tukemme]). 
+
+	<br><br>Haluamme tarjota ikimuistoisia pelielämyksiä ja kokemuksia, 
+	joita mikään muu peliyhtiö ei voi tarjota. 
+	Tämän saavuttamiseksi olemme kasanneet kokoon tiimin huippuosaajia, 
+	joiden vertaista ei Suomesta löydy
+	</p>
+
 </div>
 
-<div class="large-6 columns laamatech">
-<h1>Laama Tech<h1>
-</div>
 </article>
 
+<footer class="row">
+	<div class="large-4 medium-4 columns">
+	<h5>Ota yhteyttä</h5>
+	<ul class="some">
+			<li><span>Ma-Su 00:00-24:00</span></li>
+			<li><span>+358 00 00 00000</span></li>
+			<li><span>info@laamatech.fi</span></li>
+			<li><span>Pieni-Helvetti, 70100 Kuopio</span></li>
+	</ul>
+	</div>
+
+	<div class="large-4 medium-4 columns">
+	<h5>Sosiaalinen media</h5>
+		<ul class="some">
+			<li><a href="https://www.facebook.com/Laama-Tech-171825026745154/"><i class="fa fa-facebook"></i> <span>Facebook</span></a></li>
+			<li><a href="https://twitter.com/LaamaTech"><i class="fa fa-twitter"></i> <span>Twitter</span></a></li>
+			<li><a href="https://www.instagram.com/laamatech/"><i class="fa fa-instagram"></i> <span>Instagram</span></a></li>
+		</ul>
+	</div>
+
+	<div class="large-4 medium-4 columns">
+		<div id="map"></div>
+	
+		<script>
+			function initMap() {
+				var uluru = {lat: 62.807303, lng: 27.871702};
+				var map = new google.maps.Map(document.getElementById('map'), {
+					zoom: 17,
+					center: uluru
+				});
+				var marker = new google.maps.Marker({
+					position: uluru,
+					map: map
+				});
+			}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg4YITY1kRz9MzVLx6dgApiwE2uNwx3hE&callback=initMap">
+    </script>
+	</div>
+	<div class="large-12 medium-12 columns">
+		<h6>Team Laama - Teemu Kunttu, Jani Laamanen, Sami Laine ja Johannes Luukkonen - TuAMK PTIETS17</h6>
+	</div>
+</footer>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
