@@ -34,6 +34,9 @@ h1,h2,h3,h4{
 	padding-left: 1%;
 	padding-right:1%;
 }
+h3{
+	font-size:1.9em;
+}
 h5{
 	font-family: 'Share Tech Mono', monospace;
 	color:#363636;
@@ -155,10 +158,12 @@ h6{
 	}
 	
 	.kuvaus h3{
-		font-size:2rem;
+		font-size:1.9rem;
 		text-align:center;
 	}
-	
+	article {
+		padding-top:2rem;
+	}
 	.div3{
 		float:none;
 		position:relative;
