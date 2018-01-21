@@ -2,11 +2,12 @@
 article{
 	margin-top:20%
 }
-.laamatech h1{
+.laamatech a{
 	font-family: 'Share Tech Mono', monospace;
 	color:#363636;
+	font-size:3rem
 }
 
-.laamanen h1{
-	
+.laamanen a{
+	font-size:3rem
 }

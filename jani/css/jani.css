@@ -1,0 +1,55 @@
+body{
+	max-width:72.5rem;
+	margin:0 auto;
+	margin-top:2%;
+	background-image:url(../img/tausta.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+}
+
+header, article, footer{
+	background-color:rgba(245, 245, 255, 0.85);
+}
+
+article,footer{
+	padding-top:2%;
+}
+
+h1 {
+	font-family: 'Anton', sans-serif;
+	font-size:3rem;
+	color:#14334a;
+}
+
+p {
+	font-family: 'lato', sans-serif;
+	font-size:1.125rem;
+}
+
+.profiili{
+	float:right;
+	max-width:50%;
+	height:auto;
+	padding:1%;
+}
+.valikko{
+	margin-top:1%;
+	font-size:2rem;
+}
+
+.valikko a{
+	font-family: 'Anton', sans-serif;
+	color:rgb(23,90,139);
+}
+
+.logo{
+	text-align:center;
+}
+
+.contact{
+	font-family: 'Anton', sans-serif;
+	text-align: center;
+	font-size:1.5rem;
+	color:#14334a;
+}
