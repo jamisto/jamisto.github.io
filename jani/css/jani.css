@@ -1,5 +1,5 @@
 body{
-	max-width:72.5rem;
+	max-width:60.5rem;
 	margin:0 auto;
 	margin-top:2%;
 	background-image:url(../img/tausta.jpg);
@@ -12,9 +12,11 @@ header, article, footer{
 	background-color:rgba(245, 245, 255, 0.85);
 }
 
-article,footer{
+footer,header{
 	padding-top:2%;
+	padding-bottom:1%;
 }
+
 
 h1 {
 	font-family: 'Anton', sans-serif;
@@ -29,9 +31,9 @@ p {
 
 .profiili{
 	float:right;
-	max-width:50%;
+	max-width:60%;
 	height:auto;
-	padding:1%;
+	padding:2%;
 }
 .valikko{
 	margin-top:1%;
@@ -52,4 +54,19 @@ p {
 	text-align: center;
 	font-size:1.5rem;
 	color:#14334a;
+}
+
+/*mobiili säädöt*/
+@media only screen and (max-width: 650px){
+	
+	header{
+		border-radius:15% 15% 0 0;
+
+	}
+
+	footer{
+		border-radius: 0 0 15% 15%;
+
+	}
+
 }
