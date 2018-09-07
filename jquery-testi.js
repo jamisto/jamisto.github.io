@@ -16,7 +16,7 @@ $(document).ready(function(){
         $("#menuItems").toggle();
     });
 
-    $("#menuItems").find("a").click(function(){
+    $("#menuItems").find("button").click(function(){
         hidePages()
         showPage(this.id)
     });

@@ -23,24 +23,7 @@ body{
     border:none;
     font-size:3rem;
 }
-#menuBar h1, #menuBar button{
-    font-size:2rem;
-    display: inline;
-}
 
-.nav ul{
-    list-style-type:none;
-    margin:0;
-    padding:0;
-}
-.nav li{
-    display: inline;
-}
-
-/*Valikko säädöt end*/
-
-
-/*Linkki valikko*/
 #menuItems{
     display:block;
     width: 100%;
@@ -51,19 +34,23 @@ body{
     padding-bottom:10px;
 }
 
-#menuItems a{
+#menuItems button{
     background: #055a88;
     border-radius:10px;
     list-style-type:none;
     display: inline-block;
     color:#8cc34b;
     font-family:"Bauhaus 93";
-    font-size:3rem;
+    font-size:2rem;
     padding:5px;
     margin:0px 5px ;
 }
 
-/*Linkki valikko end*/
+
+
+/*Valikko säädöt end*/
+
+
 
 /*content css*/
 #content-container{
