@@ -25,8 +25,6 @@ body{
 }
 #menuBar h1, #menuBar button{
     font-size:2rem;
-    color:#8cc34b;
-    font-family:"Bauhaus 93";
     display: inline;
 }
 
@@ -44,16 +42,30 @@ body{
 
 /*Linkki valikko*/
 #menuItems{
-    display:none;
+    display:block;
     width: 100%;
-    margin-left:25%;
+    overflow: auto;
+    white-space: nowrap;
+    z-index: 1;
+    padding-top:10px;
+    padding-bottom:10px;
 }
 
-#menuItems ul{
+#menuItems a{
+    background: #055a88;
+    border-radius:10px;
     list-style-type:none;
+    display: inline-block;
+    color:#8cc34b;
+    font-family:"Bauhaus 93";
+    font-size:3rem;
+    padding:5px;
+    margin:0px 5px ;
 }
 
 /*Linkki valikko end*/
+
+/*content css*/
 #content-container{
     background:#24668a;
     height:99vh;
@@ -61,3 +73,4 @@ body{
 #content-container >div{
     display:none;
 }
+/*content end*/

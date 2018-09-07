@@ -3,7 +3,9 @@ function hidePages(){
 };
 
 function showPage(page){
+    $("#menuItems").find(".active").removeClass("active")
     $("."+page).css("display", "block")
+    $("#"+page).toggleClass("active")
 };
 
 $(document).ready(function(){
@@ -14,9 +16,7 @@ $(document).ready(function(){
         $("#menuItems").toggle();
     });
 
-    $("#menuItems").children().find("a").click(function(){
-        console.log(this.id)
-        $("#menuItems").toggle();
+    $("#menuItems").find("a").click(function(){
         hidePages()
         showPage(this.id)
     });
