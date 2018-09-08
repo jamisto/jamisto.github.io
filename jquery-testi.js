@@ -1,4 +1,4 @@
-function hidePages(){
+function hidePages(page){
     $("#content-container").children().hide();
 };
 
@@ -9,15 +9,15 @@ function showPage(page){
 };
 
 $(document).ready(function(){
-
+    makeMap("page4")
+    
     showPage("page1")
-
     $("#sideMenu").click(function(){
         $("#menuItems").toggle();
     });
-
+    
     $("#menuItems").find("button").click(function(){
-        hidePages()
+        hidePages(this.id)
         showPage(this.id)
     });
 
