@@ -3,9 +3,9 @@ function hidePages(){
 };
 
 function showPage(page){
-    $("#menuItems").find(".active").removeClass("active")
-    $("."+page).css("display", "block")
-    $("#"+page).toggleClass("active")
+    $("#menuItems").find(".active").removeClass("active");
+    $("."+page).css("display", "block");
+    $("#"+page).addClass("active");
 };
 
 $(document).ready(function(){

@@ -35,7 +35,7 @@ body{
 }
 
 #menuItems button{
-    background: #055a88;
+    background: #5c94b2;
     border-radius:10px;
     list-style-type:none;
     display: inline-block;
@@ -46,7 +46,10 @@ body{
     margin:0px 5px ;
 }
 
-
+.active{
+    background:#055a88 !important;
+    text-decoration: underline;
+}
 
 /*Valikko säädöt end*/
 
