@@ -5,6 +5,11 @@ function hidePages(page){
 function showPage(page){
     $("#menuItems").find(".active").removeClass("active");
     $("."+page).css("display", "block");
+
+    //if (page === "page4"){
+    //    map.invalidateSize();
+    //}
+
     $("#"+page).addClass("active");
 };
 

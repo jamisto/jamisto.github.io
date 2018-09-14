@@ -1,7 +1,7 @@
 function makeMap(page){
     let mapLocation = $("<div>", {
         id:page+"-map"
-    }).css("height","150px");
+    }).css("height","250px");
     $("."+page).append(mapLocation)
     
     let map = L.map(page+"-map").setView([51.505, -0.09], 13);
