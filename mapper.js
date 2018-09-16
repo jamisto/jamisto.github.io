@@ -11,4 +11,5 @@ function makeMap(page){
 }).addTo(map);
 
     mapLocation.append(map);
+    map.invalidateSize();
 }

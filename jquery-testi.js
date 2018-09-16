@@ -5,11 +5,14 @@ function hidePages(page){
 function showPage(page){
     $("#menuItems").find(".active").removeClass("active");
     $("."+page).css("display", "block");
+    if (page==="page4"){
+        makeMap("page4")
+    }
     $("#"+page).addClass("active");
 };
 
 $(document).ready(function(){
-    makeMap("page4")
+
     
     showPage("page1")
     $("#sideMenu").click(function(){
