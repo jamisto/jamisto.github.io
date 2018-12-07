@@ -1,0 +1,35 @@
+/* blue rgb(62, 92, 91)
+ black rgb(57, 53, 50)
+ white rgb(165, 155, 148)
+*/
+body{
+    max-width: 65rem;
+    margin:0 auto;
+    background:rgb(57, 53, 50);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    border:solid red;
+}
+.pageToggle{
+}
+#menuBar{
+    justify-content: center;
+    background: rgb(62, 92, 91);
+    border-right:
+}
+#menuBar li{
+    display: inline-flex;
+}
+
+#menuBar a{
+    margin:10px;
+    font-size:2rem;
+    color:black;
+    text-align: center;
+    text-decoration: None;
+}
+
