@@ -1,6 +1,10 @@
 /* green rgb(144 ,190, 35)
  black rgb(29, 29 ,27)
 */
+
+html{
+    scroll-behavior: smooth;
+}
 body{
     max-width: 65rem;
     margin:0 auto;
@@ -14,7 +18,7 @@ body{
     color:rgb(144 ,190, 35);
 }
 
-.green-header h1{
+.green-header h1, .green-header h2{
     color:rgb(144 ,190, 35);
     margin:50px 0;
     font-size:2rem;
@@ -36,6 +40,10 @@ body{
     );
     
     padding-top:150px;
+}
+
+#who,#works{
+    min-height:75vh;
 }
 
 /*Menu */
@@ -64,7 +72,6 @@ body{
     display:grid;
     margin:0 auto;
     grid-template-areas:"space1 tämä space2";
-    min-height:75vh;
 }
 
 #who h1{
@@ -85,6 +92,7 @@ body{
         "skills skills" ;
     justify-content: center;
     margin:0 150px;
+    margin-top:100px;
 }
 
 #about h1{
@@ -93,6 +101,8 @@ body{
 
 .about-text{
     grid-area:about;
+    line-height: 40px;
+    max-width: 500px;
 }
 
 .about-image{
@@ -118,19 +128,32 @@ body{
     grid-template-areas:
         "header"
         "work" ;
-    justify-content: center;
 }
-
+    
 .works-header{
+    justify-content: center;
     grid-area:header;
+    margin-left:150px;
 }
 
 .peon{
     display:grid;
     grid-template-columns: auto auto auto;
     grid-area:work;
+    justify-content: space-evenly;
 }
 
+.peon img{
+    width:300px;
+}
+
+.peon a:hover{
+    opacity:0.5;
+}
+
+.peon h1{
+    margin:0;
+}
 /*contact*/
 #contact{
     bottom:0;
@@ -138,6 +161,43 @@ body{
     width: 100%;
     justify-content: center;
     background: white;
+    padding-bottom:150px;
 }
 
+#contact h1{
+    margin-left:150px;
+}
+#contact li{
+    list-style: none;
+    display:inline;
+    margin-left:150px;
+}
 /*******/
+
+/*mobile settings*/
+@media only screen and (max-width: 1090px){
+    #about{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    }
+    .about-skills >div{
+        display:flex;
+        flex-wrap:wrap;
+        margin:0 15px;
+    }
+
+    .about-text{
+        display:flex;
+        flex-wrap: wrap;
+        width:100%;
+        margin:0px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .about-image img{
+        max-width:100%;
+    }
+}
+/**/
