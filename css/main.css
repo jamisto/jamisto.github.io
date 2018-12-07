@@ -1,35 +1,143 @@
-/* blue rgb(62, 92, 91)
- black rgb(57, 53, 50)
- white rgb(165, 155, 148)
+/* green rgb(144 ,190, 35)
+ black rgb(29, 29 ,27)
 */
 body{
     max-width: 65rem;
     margin:0 auto;
-    background:rgb(57, 53, 50);
     font-family: 'Roboto Condensed', sans-serif;
+    margin:0 auto;
+    min-width: 100%;
+    font-size:25px;
 }
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-    border:solid red;
+
+.green-text *{
+    color:rgb(144 ,190, 35);
 }
-.pageToggle{
+
+.green-header h1{
+    color:rgb(144 ,190, 35);
+    margin:50px 0;
+    font-size:2rem;
+}
+
+.white-text{
+    color:white;
+}
+.black-bg{
+    background:rgb(29, 29 ,27);
+}
+
+.slant-bottom{
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        0 calc(99% - 6vw)
+    );
+    
+    padding-top:150px;
+}
+
+/*Menu */
+#menuBar li{
+    display: inline-block;
+    margin: 0px 15px;
 }
 #menuBar{
+    display:flex;
     justify-content: center;
-    background: rgb(62, 92, 91);
-    border-right:
+    text-align:center;
+    padding:50px 0px;
+    position:fixed;
+    width:100%;
+    z-index:100;
 }
-#menuBar li{
-    display: inline-flex;
-}
-
 #menuBar a{
-    margin:10px;
-    font-size:2rem;
-    color:black;
-    text-align: center;
-    text-decoration: None;
+    text-decoration: none;
+    font-size:25px;
+}
+/**********/
+
+/* Who*/
+#who{
+    padding-top:150px;
+    display:grid;
+    margin:0 auto;
+    grid-template-areas:"space1 tämä space2";
+    min-height:75vh;
 }
 
+#who h1{
+    font-size:150px;
+}
+#who h2{
+    font-size:50px;
+}
+#who >div{
+    grid-area:"tämä";
+}
+/******/
+/*About*/
+#about{
+    display:grid;
+    grid-template-areas:
+        "about image" 
+        "skills skills" ;
+    justify-content: center;
+    margin:0 150px;
+}
+
+#about h1{
+    padding-bottom:15px;
+}
+
+.about-text{
+    grid-area:about;
+}
+
+.about-image{
+    grid-area:image;
+}
+.about-image img{
+    width:500px;
+    padding:5%;
+}
+
+.about-skills{
+    grid-area:skills;
+    padding-bottom:50px;
+    display:grid;
+    grid-template-columns: auto auto auto;
+}
+
+/***********/
+
+/*Works*/
+#works{
+    display:grid;
+    grid-template-areas:
+        "header"
+        "work" ;
+    justify-content: center;
+}
+
+.works-header{
+    grid-area:header;
+}
+
+.peon{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-area:work;
+}
+
+/*contact*/
+#contact{
+    bottom:0;
+    left:0;
+    width: 100%;
+    justify-content: center;
+    background: white;
+}
+
+/*******/
