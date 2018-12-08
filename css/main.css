@@ -117,7 +117,7 @@ body{
     grid-area:skills;
     padding-bottom:50px;
     display:grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
 }
 
 /***********/
@@ -156,21 +156,17 @@ body{
 }
 /*contact*/
 #contact{
-    bottom:0;
-    left:0;
-    width: 100%;
+    display: flex;
     justify-content: center;
-    background: white;
     padding-bottom:150px;
 }
 
-#contact h1{
-    margin-left:150px;
+.contact-list{
+    margin:10px;
 }
+
 #contact li{
     list-style: none;
-    display:inline;
-    margin-left:150px;
 }
 /*******/
 
@@ -196,8 +192,43 @@ body{
 }
 
 @media only screen and (max-width: 800px){
+    
+    #about{
+        margin:0 25px;
+    }
+    
     .about-image img{
         max-width:100%;
+        float:right;
+        padding:0 0 10px 0;
+    }
+
+    .about-skills{
+        display:grid;
+        justify-content: space-evenly;
+    }
+    .about-skills > div{
+        max-width: 250px;
+    }
+    
+    #works{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .works-header{
+        margin-left: 25px;
+    }
+
+   
+    
+}
+
+@media only screen and (max-width: 500px){
+    .about-image img{
+       
     }
 }
+
 /**/
