@@ -10,8 +10,9 @@ body{
     margin:0 auto;
     font-family: 'Roboto Condensed', sans-serif;
     margin:0 auto;
-    min-width: 100%;
+    min-width: 300px;
     font-size:25px;
+    max-width: 100%;
 }
 
 .green-text *{
@@ -156,18 +157,24 @@ body{
 }
 /*contact*/
 #contact{
-    display: flex;
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "contacts";
     justify-content: center;
     padding-bottom:150px;
 }
 
-.contact-list{
-    margin:10px;
+.contact-header{
+    grid-area: header;
+
 }
 
-#contact li{
-    list-style: none;
+.contact-list{
+    grid-area: contacts;
+    font-size:1.5rem;
 }
+
 /*******/
 
 /*mobile settings*/
@@ -193,6 +200,10 @@ body{
 
 @media only screen and (max-width: 800px){
     
+    #who{
+        padding-bottom:50px;
+    }
+
     #about{
         margin:0 25px;
     }
@@ -220,15 +231,5 @@ body{
     .works-header{
         margin-left: 25px;
     }
-
-   
-    
 }
-
-@media only screen and (max-width: 500px){
-    .about-image img{
-       
-    }
-}
-
 /**/
