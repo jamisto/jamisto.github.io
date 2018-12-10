@@ -108,6 +108,7 @@ body{
     display:grid;
     grid-template-areas:
         "about image" 
+        "skills-header skills-header"
         "skills skills" ;
     justify-content: center;
     margin:0 150px;
@@ -132,6 +133,11 @@ body{
     padding:5%;
 }
 
+.about-skills-header{
+    grid-area:skills-header;
+    padding:0;
+}
+
 .about-skills{
     grid-area:skills;
     padding-bottom:50px;
@@ -140,6 +146,7 @@ body{
 }
 
 /***********/
+
 
 /*Works*/
 #works{
