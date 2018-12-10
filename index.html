@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Jani Laamanen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="img/llama.png">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
@@ -20,7 +21,9 @@
         <li><a href="#contact">Contact</a></li>
     </ul>
 </div>
-
+<div id="mobileMenu" class="black-bg">
+    <button onclick="openMenu()"> &#9776;</button>
+</div>
 <div id="who" class="black-bg white-text slant-bottom">
     <div></div>
     <div>
@@ -49,8 +52,8 @@
                 <li>JQUERY</li>
             </ul>
         </div>
-        <div>
-            <h1>Adobe software</h1>
+        <h1>Adobe software</h1>
+            <div>
             <ul>
                 <li>Photoshop</li>
                 <li>InDesign</li>
@@ -86,5 +89,27 @@
         </ul>
     </div>
 </div>
+
+<script>
+
+function openMenu(){
+    $("#menuBar").css("width", "50%");
+    $("body").append($("<div>",{
+        id:"closer"
+        }).click(()=>{
+            closeMenu();
+        })
+    );
+    $("#menuBar a").click(()=>{
+        closeMenu();
+    });
+}
+
+function closeMenu(){
+    $("#menuBar").css("width", "0%");
+    $("#closer").remove();
+}
+
+</script>
 </body>
 </html>

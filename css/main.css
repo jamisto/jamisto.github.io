@@ -65,6 +65,24 @@ body{
     text-decoration: none;
     font-size:25px;
 }
+
+#mobileMenu{
+    display:none;
+    position:fixed;
+    z-index:10;
+    width:100%;
+    padding:10px 0;
+}
+
+#mobileMenu button{
+    border:solid rgb(144 ,190, 35);
+    border-radius:50px;
+    background: rgb(29, 29 ,27);
+    color:white;
+    padding:15px;
+    font-size:2rem;
+    margin-left:15px;
+}
 /**********/
 
 /* Who*/
@@ -208,6 +226,22 @@ body{
 
 @media only screen and (max-width: 800px){
     
+    #mobileMenu{
+        display:flex;
+    }
+
+    #menuBar{
+        width: 0%;
+        height: 100%;
+        position:fixed;
+        overflow:hidden;
+    }
+
+    #menuBar li{
+        display:block;
+        padding:15px 0;
+    }
+
     #who{
         padding-bottom:50px;
     }
