@@ -95,14 +95,17 @@
 
 <script>
 
+
 function openMenu(){
     $("#menuBar").css("width", "50%");
-    $("body").append($("<div>",{
-        id:"closer"
-        }).click(()=>{
-            closeMenu();
-        })
-    );
+    
+    let closer = $("<div>",{
+                    id:"closer"
+                    }).click(()=>{
+                        closeMenu();
+                    });
+
+    $("body").prepend(closer);
     $("#menuBar a").click(()=>{
         closeMenu();
     });
