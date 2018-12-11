@@ -24,6 +24,7 @@
 <div id="mobileMenu" class="black-bg">
     <button onclick="openMenu()"> &#9776;</button>
 </div>
+<div id="mobileMenuContent" class="black-bg green-text"></div>
 <div id="who" class="black-bg white-text slant-bottom">
     <div></div>
     <div>
@@ -32,7 +33,6 @@
         <h2> A "somewhat experienced" frontend developer</h2>
     </div>
 </div>
-<div id="about"></div>
 <div id="about">
     <div class="about-text green-header">
         <h1>Jani Laamanen</h1>
@@ -95,9 +95,23 @@
 
 <script>
 
+ if ($(window).width() < 800 ){
+        $("#mobileMenuContent").append($("#menuBar").children());
+}
 
+$( window ).resize(function() {
+    if ($(window).width() <= 800 ){
+        $("#mobileMenuContent").append($("#menuBar").children());
+        console.log("on pieni")
+    }
+    if ($(window).width() > 800){
+        console.log("on suuri")
+        $("#menuBar").append($("#mobileMenuContent").children());
+        $("#mobileMenuContent a").off();
+    }
+});
 function openMenu(){
-    $("#menuBar").css("width", "50%");
+    $("#mobileMenuContent").css("width", "50%");
     
     let closer = $("<div>",{
                     id:"closer"
@@ -106,13 +120,13 @@ function openMenu(){
                     });
 
     $("body").prepend(closer);
-    $("#menuBar a").click(()=>{
+    $("#mobileMenuContent a").click(()=>{
         closeMenu();
     });
 }
 
 function closeMenu(){
-    $("#menuBar").css("width", "0%");
+    $("#mobileMenuContent").css("width", "0%");
     $("#closer").remove();
 }
 

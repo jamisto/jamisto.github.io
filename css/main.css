@@ -61,7 +61,7 @@ body{
     width:100%;
     z-index:100;
 }
-#menuBar a{
+#menuBar a, #mobileMenuContent a{
     text-decoration: none;
     font-size:25px;
 }
@@ -83,6 +83,14 @@ body{
     font-size:2rem;
     margin-left:15px;
 }
+
+#mobileMenuContent{
+    display:none;
+    z-index:100;
+    justify-content: center;
+    text-align: center;
+}
+
 #closer{
     width: 100%;
     height: 100%;
@@ -240,19 +248,24 @@ body{
 
 @media only screen and (max-width: 800px){
     
+    #menuBar{
+        display:none;
+    }
+
     #mobileMenu{
         display:flex;
     }
 
-    #menuBar{
+    #mobileMenuContent{
+        display:flex;
         width: 0%;
         height: 100%;
         position:fixed;
         overflow:hidden;
+        transition: 0.5s;
     }
 
-    #menuBar li{
-        display:block;
+    #mobileMenuContent li{
         padding:15px 0;
     }
 
