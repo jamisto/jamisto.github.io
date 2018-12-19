@@ -100,14 +100,15 @@
 }
 
 $( window ).resize(function() {
-    if ($(window).width() <= 800 ){
+    if ($(window).width() <= 800 && $("#menuBar").has().children() ){
+        console.log("jejee mobiili päälle")
         $("#mobileMenuContent").append($("#menuBar").children());
-        console.log("on pieni")
     }
-    if ($(window).width() > 800){
-        console.log("on suuri")
+    if ($(window).width() > 800 && $("#mobileMenuContent").has().children()){
+        console.log("jejee mobiili pois")
         $("#menuBar").append($("#mobileMenuContent").children());
         $("#mobileMenuContent a").off();
+        closeMenu();
     }
 });
 function openMenu(){
