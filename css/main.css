@@ -22,9 +22,10 @@ body{
 .green-header h1, .green-header h2{
     color:rgb(144 ,190, 35);
     margin:50px 0;
+}
+h1{
     font-size:2rem;
 }
-
 .white-text{
     color:white;
 }
@@ -47,6 +48,11 @@ body{
     min-height:75vh;
 }
 
+/*Shared*/
+#about, #works{
+    padding-top:100px;
+}
+/**/
 /*Menu */
 #menuBar li{
     display: inline-block;
@@ -127,7 +133,7 @@ body{
         "skills skills" ;
     justify-content: center;
     margin:0 150px;
-    margin-top:100px;
+    padding-top:100px;
 }
 
 #about h1{
