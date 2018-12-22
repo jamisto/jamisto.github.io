@@ -101,11 +101,9 @@
 
 $( window ).resize(function() {
     if ($(window).width() <= 800 && $("#menuBar").has().children() ){
-        console.log("jejee mobiili päälle")
         $("#mobileMenuContent").append($("#menuBar").children());
     }
     if ($(window).width() > 800 && $("#mobileMenuContent").has().children()){
-        console.log("jejee mobiili pois")
         $("#menuBar").append($("#mobileMenuContent").children());
         $("#mobileMenuContent a").off();
         closeMenu();
