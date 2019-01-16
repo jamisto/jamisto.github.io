@@ -130,7 +130,9 @@ h1{
     grid-template-areas:
         "about image" 
         "skills-header skills-header"
-        "skills skills" ;
+        "skills skills"
+        "jobs-header jobs-header"
+        "jobs jobs";
     justify-content: center;
     margin:0 150px;
     padding-top:100px;
@@ -150,7 +152,7 @@ h1{
     grid-area:image;
 }
 .about-image img{
-    width:500px;
+    width:350px;
     padding:5%;
 }
 
@@ -164,6 +166,22 @@ h1{
     padding-bottom:50px;
     display:grid;
     grid-template-columns: auto auto;
+}
+
+.about-jobs-header{
+    grid-area:jobs-header;
+    padding:0px;
+}
+
+.about-jobs{
+    grid-area:jobs;
+    padding-bottom:50px;
+    display:grid;
+    grid-template-columns: auto auto;
+}
+
+.about-jobs div{
+    padding-bottom:25px;
 }
 
 /***********/
