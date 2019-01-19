@@ -109,9 +109,9 @@ h1{
 /* Who*/
 #who{
     padding-top:150px;
-    display:grid;
+    display:flex;
+    justify-content: center;
     margin:0 auto;
-    grid-template-areas:"space1 tämä space2";
 }
 
 #who h1{
@@ -120,9 +120,6 @@ h1{
 #who h2{
     font-size:50px;
 }
-#who >div{
-    grid-area:"tämä";
-}
 /******/
 /*About*/
 #about{
@@ -130,7 +127,8 @@ h1{
     grid-template-areas:
         "about image" 
         "skills-header skills-header"
-        "skills skills" ;
+        "skills skills";
+        
     justify-content: center;
     margin:0 150px;
     padding-top:100px;
@@ -150,7 +148,7 @@ h1{
     grid-area:image;
 }
 .about-image img{
-    width:500px;
+    width:350px;
     padding:5%;
 }
 
@@ -166,6 +164,12 @@ h1{
     grid-template-columns: auto auto;
 }
 
+.about-skills div{
+    margin-bottom:25px;
+}
+
+
+
 /***********/
 
 
@@ -173,13 +177,40 @@ h1{
 #works{
     display:grid;
     grid-template-areas:
-        "header"
-        "work" ;
+        "jobs-header"
+        "jobs"
+        "works-header"
+        "work" 
+        ;
 }
-    
+
+.works-jobs-header{
+    grid-area:jobs-header;
+    margin-left:150px;
+}
+
+.works-jobs{
+    grid-area:jobs;
+    padding-bottom:50px;
+    display:grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+}
+
+.works-jobs h1, .works-jobs h2{
+    color:white;
+}
+
+.works-jobs div{
+    background: rgba(144 ,190, 35,0.5);
+    width:250px;
+    text-align: center;
+    border-radius:10px;
+}
+
 .works-header{
     justify-content: center;
-    grid-area:header;
+    grid-area:works-header;
     margin-left:150px;
 }
 
@@ -293,10 +324,19 @@ h1{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
-    .works-header{
+    .works-header, .works-jobs-header{
         margin-left: 25px;
+    }
+    .works-jobs, .peon{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .works-jobs div, .peon div{
+        margin-bottom:25px;
     }
 }
 /**/
