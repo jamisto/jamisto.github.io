@@ -162,7 +162,7 @@ function closeMenu(){
 
 function popUpCloser(){
     $(".pop-up").remove();
-    $("#closer").remove();
+    $("#popUpcloser").remove();
     $("body").css("overflow","initial");
 }
 
@@ -184,7 +184,7 @@ function openJob(job){
             popUpCloser();
         });
         let closer = $("<div>",{
-                    id:"closer"
+                    id:"popUpcloser"
                     }).click(()=>{
                         popUpCloser();
                     });
