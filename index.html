@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
 </head>
 <body>
-<!--    Well hello there. If you are wondering I didn't use Bootstrap or other frameworks. Just css grid for screen witdhs +800px and flexbox for the smaller ones.-->
+<!--    Well hello there. If you are wondering I didn't use Bootstrap or other frameworks. Just css grid for screen widths +800px and flexbox for the smaller ones.-->
 <div id="menuBar" class="black-bg green-text">
     <ul>
         <li><a href="#who">Who</a></li>
@@ -74,15 +74,15 @@
         <h1>Work exprerience</h1>
     </div>
     <div class="works-jobs">
-        <div>
+        <div id = "LähiRahoitus">
             <h1>LähiRahoitus</h1>
             <h2>Software Developer</h2>
         </div>
-        <div>
+        <div id = "TUAS">
             <h1>Turku University of Applied Sciences</h1>
             <h2>Frontend developer</h2>
         </div>
-        <div>
+        <div id = "Arts">
             <h1>Turku Arts Academy</h1>
             <h2>Frontend developer</h2>
         </div>
@@ -117,18 +117,26 @@
 
  if ($(window).width() < 800 ){
         $("#mobileMenuContent").append($("#menuBar").children());
+        popUpCloser()
 }
 
 $( window ).resize(function() {
     if ($(window).width() <= 800 && $("#menuBar").has().children() ){
         $("#mobileMenuContent").append($("#menuBar").children());
+        popUpCloser()
     }
     if ($(window).width() > 800 && $("#mobileMenuContent").has().children()){
         $("#menuBar").append($("#mobileMenuContent").children());
         $("#mobileMenuContent a").off();
+        popUpCloser()
         closeMenu();
     }
 });
+
+$(".works-jobs div").click(function() {
+    openJob($(this).attr("id"));
+})
+
 function openMenu(){
     $("#mobileMenuContent").css("width", "50%");
     
@@ -136,18 +144,56 @@ function openMenu(){
                     id:"closer"
                     }).click(()=>{
                         closeMenu();
+                        $("body").css("overflow","initial");
                     });
 
     $("body").prepend(closer);
     $("#mobileMenuContent a").click(()=>{
         closeMenu();
+        $("body").css("overflow","initial");
     });
+    $("body").css("overflow","hidden");
 }
 
 function closeMenu(){
     $("#mobileMenuContent").css("width", "0%");
     $("#closer").remove();
 }
+
+function popUpCloser(){
+    $(".pop-up").remove();
+    $("#closer").remove();
+    $("body").css("overflow","initial");
+}
+
+
+function openJob(job){
+    $.getJSON("jobs.json", function (data){
+        let jobPopUp = $("<div>", {
+            id: job + "-pop-up",
+            class: "pop-up"
+        });
+        
+        let jobPopUpHeader = $("<h1>").text(data.jobs[job][0]);
+        let jobPopUpTitle = $("<h2>").text(data.jobs[job][1]);
+        let jobPopUpDesc = $("<p>").text(data.jobs[job][2]);
+
+        let closePopUp = $("<button>", {
+            id: "closePopUp"
+        }).text("X").click(()=>{
+            popUpCloser();
+        });
+        let closer = $("<div>",{
+                    id:"closer"
+                    }).click(()=>{
+                        popUpCloser();
+                    });
+
+        jobPopUp.append(closePopUp,jobPopUpHeader,jobPopUpTitle,jobPopUpDesc);
+        $("body").append(jobPopUp).prepend(closer).css("overflow","hidden");
+    })
+}
+
 
 </script>
 </body>

@@ -1,0 +1,20 @@
+
+{ 
+    "jobs": {
+        "TUAS": [
+            "Turku University of Applied Sciences",
+            "Front End Developer",
+            "Part of a information security and networking research team. I worked on a Azure based IoT data visualization system as a front end developer. A lot of HTML, CSS and Jquery."
+        ],
+        "LähiRahoitus":[
+            "LähiRahoitus Oy",
+            "Software Developer",
+            "Worked as a trainee. My main work assignment was the designing, programming and maintenance of the company's information system."
+        ],
+        "Arts":[
+            "Turku Arts Academy",
+            "Front End Developer",
+            "Made a website for their event Taideakatemian Yö (2018)." 
+        ]
+    }
+}

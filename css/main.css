@@ -103,6 +103,7 @@ h1{
     z-index:11;
     background: rgba(144 ,190, 35,0.5);
     position:fixed;
+    margin:0;
 }
 /**********/
 
@@ -209,10 +210,44 @@ h1{
     padding: 0 10px;
 }
 
+.works-jobs div:hover{
+    opacity: 0.5;
+}
+
 .works-header{
     justify-content: center;
     grid-area:works-header;
     margin-left:150px;
+}
+
+.pop-up{
+    position:fixed;
+    color:white;
+    background:rgb(29, 29 ,27); 
+    z-index:101;
+    padding:10% 5%;
+    top: 25vh;
+    width: 90%;
+    overflow: scroll;
+}
+
+.pop-up >*{
+    padding-top:10px;
+}
+
+.pop-up h2{
+    text-decoration: underline;
+}
+
+#closePopUp{
+    float:right;
+    margin:15px;
+    padding:15px;
+    color:white;
+    font-size:15px;
+    background:rgb(144 ,190, 35);
+    border:none;
+    border-radius: 10px;
 }
 
 .peon{
@@ -338,6 +373,19 @@ h1{
 
     .works-jobs div, .peon div{
         margin-bottom:25px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .pop-up{
+        height:50%;
+    }
+}
+
+@media only screen and (max-height: 400px) {
+    .pop-up{
+        top:0;
+        height:100%
     }
 }
 /**/
