@@ -228,7 +228,6 @@ h1{
     padding:10% 5%;
     top: 25vh;
     width: 90%;
-    overflow: scroll;
 }
 
 .pop-up >*{
@@ -290,7 +289,14 @@ h1{
 
 /*******/
 
-/*mobile settings*/
+/*mobile/other screen settings*/
+
+@media only screen and (min-width: 2000px){
+    .pop-up{
+        padding:5% 5%;
+    }
+}
+
 @media only screen and (max-width: 1090px){
     #about{
     display:flex;
@@ -317,6 +323,7 @@ h1{
     .about-skills > div{
         max-width: 250px;
     }
+    
 }
 
 @media only screen and (max-width: 800px){
