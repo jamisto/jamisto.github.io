@@ -128,6 +128,7 @@ h1{
 }
 #who h2{
     font-size:50px;
+    padding-top:15px;
 }
 /******/
 /*About*/
@@ -337,6 +338,17 @@ h1{
 
 @media only screen and (max-width: 800px){
     
+    #who{
+        min-height: 40vh;
+        padding:150px 15px;
+    }
+
+    #who h1{
+        font-size:75px;
+    }
+    #who h2{
+        font-size:25px;
+    }
     #menuBar{
         display:flex;
         width: 0%;
