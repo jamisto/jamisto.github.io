@@ -115,10 +115,16 @@
 
 <script>
 
+$( window ).resize(function() {
+    if ($(window).width() < 800 ){
+            $("#menuBar").css("width","");
+    }
+});
 
 $(".works-jobs div").click(function() {
     openJob($(this).attr("id"));
 })
+
 
 function openMenu(){
     $("#menuBar").css("width", "50%");
