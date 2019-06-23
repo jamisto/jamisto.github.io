@@ -24,7 +24,7 @@
 <div id="mobileMenu" class="black-bg">
     <button onclick="openMenu()"> &#9776;</button>
 </div>
-<div id="mobileMenuContent" class="black-bg green-text"></div>
+<!---<div id="mobileMenuContent" class="black-bg green-text"></div>-->
 <div id="who" class="black-bg white-text slant-bottom">
     <div></div>
     <div>
@@ -115,31 +115,13 @@
 
 <script>
 
- if ($(window).width() < 800 ){
-        $("#mobileMenuContent").append($("#menuBar").children());
-        popUpCloser()
-}
-
-$( window ).resize(function() {
-    if ($(window).width() <= 800 && $("#menuBar").has().children() ){
-        $("#mobileMenuContent").append($("#menuBar").children());
-        popUpCloser()
-    }
-    if ($(window).width() > 800 && $("#mobileMenuContent").has().children()){
-        $("#menuBar").append($("#mobileMenuContent").children());
-        $("#mobileMenuContent a").off();
-        popUpCloser()
-        closeMenu();
-    }
-});
 
 $(".works-jobs div").click(function() {
     openJob($(this).attr("id"));
 })
 
 function openMenu(){
-    $("#mobileMenuContent").css("width", "50%");
-    
+    $("#menuBar").css("width", "50%");
     let closer = $("<div>",{
                     id:"closer"
                     }).click(()=>{
@@ -148,7 +130,7 @@ function openMenu(){
                     });
 
     $("body").prepend(closer);
-    $("#mobileMenuContent a").click(()=>{
+    $("#menuBar a").click(()=>{
         closeMenu();
         $("body").css("overflow","initial");
     });
@@ -156,7 +138,7 @@ function openMenu(){
 }
 
 function closeMenu(){
-    $("#mobileMenuContent").css("width", "0%");
+    $("#menuBar").css("width", "");
     $("#closer").remove();
 }
 
