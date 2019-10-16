@@ -206,7 +206,7 @@ a{
     height: auto;
 }
 
-.social a:hover, #contacts a:hover, .partners a:hover{
+.social a:hover, #contacts a:hover, .partners a img:hover{
     opacity: 0.5;
 }
 

@@ -37,6 +37,10 @@
         margin-right: auto
     }
 
+    #contacts{
+        min-height:300px;
+    }
+
     #content-container{
         padding-top:87px;
     }
