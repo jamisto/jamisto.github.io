@@ -1,0 +1,173 @@
+/*Mobile settings*/
+
+@media only screen and (min-height:1000px){
+    .home{
+        height:90vh;
+    }
+
+    .home img{
+        width: 72%;
+    }
+
+    #content-container{
+        min-height:90vh;
+    }
+    .content{
+        min-height:25vh;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    #topMenu{
+        display:none;
+    }
+
+    #menuBar{
+        width:100%;
+        z-index: 10;
+        top:0;
+        position:fixed;
+    }
+
+    #contacts img{
+        width: 7rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    #contacts{
+        min-height:300px;
+    }
+
+    #content-container{
+        padding-top:87px;
+    }
+
+    #openMobileMenu{
+        display: block;
+    }
+
+    #mobileMenu{
+        display:block;
+        width:0;
+        top:0;
+        left:0;
+        overflow-x: hidden;
+        position:fixed;
+        z-index: 12;
+        height:100%;
+        padding-top:10px;
+        padding-bottom:10px;
+        background: #1D1D1B;
+        transition: 0.15s;
+    }
+
+    #mobileMenu ul{
+        margin-top:25px;
+    }
+
+    #mobileMenu li{
+        text-align: center;
+        padding:15px;
+    }
+
+    #mobileMenu a{
+        color: #ffffff;
+        font-family: Montserrat-Bold;
+    }
+
+    #closeNav{
+        position: absolute;
+        top:0;
+        right: 25px;
+    }
+
+    #closer{
+        background:rgba(0,0,0,0.8);
+        position:fixed;
+        z-index: 11;
+        height:100%;
+        width:100%;
+    }
+
+    .content{
+        max-width:100%;
+        margin:0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding:5% 10% 15px 10%;
+    }
+
+    .home{
+        min-height: 50vh;
+    }
+    
+    .home img{
+        width:100%;
+    }
+
+    .social a:hover{
+        opacity: 1;
+    }
+
+    #contacts{
+        text-align: center;
+    }
+    
+}
+
+@media only screen and (max-width: 769px){
+    
+    
+    #home img{
+        width:75%;
+        height: auto;
+    }
+
+    #contacts div{
+        padding-bottom:15px;
+    }
+}
+
+@media only screen and (max-width:767px){
+    #older{
+        border-left:none;
+        border-bottom:solid #009DAD 1px;
+        margin-bottom:40px;
+    
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .social img {
+        height: auto;
+        margin-bottom:15px;
+    }
+    
+    #contacts img{
+        width:150px;
+        height:150px;
+    }
+    .program img{
+        max-width:100%;
+        height:auto;
+        margin-top: 50px;
+    }
+    
+    
+}
+
+
+/*Mobile end*/
+
+
+/*
+    //
+    <lo
+    ll
+    llama~
+    || ||
+    '' ''
+/*
