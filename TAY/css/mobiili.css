@@ -37,12 +37,8 @@
         margin-right: auto
     }
 
-    #contacts{
-        min-height:300px;
-    }
-
     #content-container{
-        padding-top:87px;
+        padding-top:100px;
     }
 
     #openMobileMenu{
@@ -75,7 +71,7 @@
 
     #mobileMenu a{
         color: #ffffff;
-        font-family: Montserrat-Bold;
+        font-family: GothamBookBold;
     }
 
     #closeNav{

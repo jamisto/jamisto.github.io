@@ -3,23 +3,22 @@ green #006633
 black #1D1D1B
 White  #FFFFFF
 Blue #009DAD
-red rgba(213,34,30,1)
 */
 /*Fonts and defaults*/
 @font-face {
-    font-family: Montserrat-Regular;
-    src: url(../fonts/Montserrat-Regular.ttf);
+    font-family: GothamBook;
+    src: url(../fonts/Gotham-Book.otf);
 }
 
 @font-face {
-    font-family: Montserrat-Bold;
-    src: url(../fonts/Montserrat-Bold.ttf);
+    font-family: GothamBookBold;
+    src: url(../fonts/Gotham-Book-Bold.otf);
 }
 
 body{
     margin:0 auto;
     color: #ffffff;
-    font-family: Montserrat-Regular;
+    font-family: GothamBook;
 }
 p{
     font-size:1rem;
@@ -30,7 +29,7 @@ p{
 }
 
 .active{
-    color:rgba(213,34,30,1) !important;
+    color:#009DAD !important;
 }
 
 #openMobileMenu{
@@ -42,19 +41,18 @@ p{
 }
 
 button{
-    background:rgba(213,34,30,1);
+    background:#006633;
     border:none;
     border-radius:10px;
     padding:15px;
+    
 }
 
 hr{
-    border-color: rgba(213,34,30,1);
+    border-color: #009DAD;
     border-width:1px;
 }
-a{
-    text-decoration: none;
-}
+
 .flex-container{
     display:flex;
     flex-wrap: wrap-reverse;
@@ -79,13 +77,13 @@ a{
 
 #topMenu a{
     font-size:1.25rem;;
-    font-family: Montserrat-Bold;
+    font-family: GothamBookBold;
     padding:0px 10px;
     color:#FFFFFF;
 }
 
 #topMenu a:hover{
-    color:rgba(213,34,30,1);
+    color:#009DAD;
     text-decoration: none;
 }
 
@@ -93,10 +91,10 @@ a{
 
 /*content and its container*/
 #content-container{
-    background-image:url(../img/tausta.jpg);
+    background-image:url(../img/tausta.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom right; 
+    background-position: center center; 
     padding:0px;
     
     
@@ -128,37 +126,11 @@ a{
 }
 /*content end*/
 
-/*About page*/
-.about b{
-    font-weight: bolder;
-}
-#nena{
-    background: rgba(213,34,30,1);
-    width:50px;
-    height:50px;
-    border-radius: 50px;
-    border:transparent;
-    display: inline-block;
-    text-align: center;
-    line-height: 50px;
-    margin:0 auto;
-    padding:0;
-
-}
-#nena a{
-    color:white;
-    font-family: Montserrat-Regular;
-}
-/*About page end*/
 /*home page*/
 
 .home{
     min-height: 75vh;
     display:block;
-    background-image:url(../img/tausta2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom right; 
 }
 
 .home img{
@@ -178,18 +150,18 @@ a{
 }
 .program h2{
     font-size:1.25rem;
-    font-family:Montserrat-Bold;
+    font-family:GothamBookBold;
 }
 .program p{
     line-height: initial;
 }
 
 #older{
-    border-left:solid rgba(213,34,30,1) 2px;
+    border-left:solid #009DAD 2px;
 
 }
 .program h3{
-    font-family: Montserrat-Bold;
+    font-family: GothamBookBold;
     color:red;
 }
 
@@ -206,7 +178,7 @@ a{
     height: auto;
 }
 
-.social a:hover, #contacts a:hover, .partners a img:hover{
+.social a:hover, #contacts a:hover, .partners a:hover{
     opacity: 0.5;
 }
 
@@ -215,14 +187,7 @@ a{
 }
 
 /*social page end*/
-/*Partners page*/
-.partners img{
-    max-width: 500px;
-    padding: 25px;
-    margin:0 auto;
-    display: block;
-}
-/*Partners page end*/
+
 /*contacts*/
 #contacts{
     text-align: left;

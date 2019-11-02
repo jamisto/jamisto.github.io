@@ -6,6 +6,7 @@
     <title>Jani Laamanen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="img/llama.png">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
@@ -24,7 +25,6 @@
 <div id="mobileMenu" class="black-bg">
     <button onclick="openMenu()"> &#9776;</button>
 </div>
-<!---<div id="mobileMenuContent" class="black-bg green-text"></div>-->
 <div id="who" class="black-bg white-text slant-bottom">
     <div></div>
     <div>
@@ -37,7 +37,7 @@
     <div class="about-text green-header">
         <h1>Jani Laamanen</h1>
         <p>
-                I'm a 2nd year student from Turku University of Applied Sciences, studying the field of Business IT. I'm intrested in frontend development as well as Information security, which will be my specialisation.
+                Student from Turku University of Applied Sciences, studying the field of Business IT. I'm intrested in frontend development as well as Information security, which will be my specialisation.
         </p>
     </div>
     <div class="about-image">
@@ -92,9 +92,21 @@
     </div>
     <div class="peon">
         <div>
-            <h2>Taideakatemian Yö(Website)</h2>
-            <a href="http://taideakatemianyo.fi" target="_blank">
-                <img src="/img/teksti.png" alt="taideakatemianyo">
+            <h2>Taideakatemian Yö 2018</h2>
+            <a href="/TAY" target="_blank">
+                <img src="/img/TAY18.png" alt="taideakatemianyo18">
+            </a>
+        </div>
+        <div>
+            <h2>Taideakatemian Yö 2019</h2>
+            <a href="/TAY19" target="_blank">
+                <img src="/img/TAY19.jpg" alt="taideakatemianyo19">
+            </a>
+        </div>
+        <div>
+            <h2>Portfolio for Sirja Rahikka</h2>
+            <a href="http://rahikkasirja.fi" target="_blank">
+                <img src="/img/sirja.png" alt="Sirja Rahikka">
             </a>
         </div>
     </div>
@@ -112,77 +124,5 @@
         </ul>
     </div>
 </div>
-
-<script>
-
-$( window ).resize(function() {
-    if ($(window).width() < 800 ){
-            $("#menuBar").css("width","");
-    }
-});
-
-$(".works-jobs div").click(function() {
-    openJob($(this).attr("id"));
-})
-
-
-function openMenu(){
-    $("#menuBar").css("width", "50%");
-    let closer = $("<div>",{
-                    id:"closer"
-                    }).click(()=>{
-                        closeMenu();
-                        $("body").css("overflow","initial");
-                    });
-
-    $("body").prepend(closer);
-    $("#menuBar a").click(()=>{
-        closeMenu();
-        $("body").css("overflow","initial");
-    });
-    $("body").css("overflow","hidden");
-}
-
-function closeMenu(){
-    $("#menuBar").css("width", "");
-    $("#closer").remove();
-}
-
-function popUpCloser(){
-    $(".pop-up").remove();
-    $("#popUpcloser").remove();
-    $("body").css("overflow","initial");
-}
-
-
-function openJob(job){
-    $.getJSON("jobs.json", function (data){
-        let jobPopUp = $("<div>", {
-            id: job + "-pop-up",
-            class: "pop-up"
-        });
-        
-        let jobPopUpHeader = $("<h1>").text(data.jobs[job][0]);
-        let jobPopUpTitle = $("<h2>").text(data.jobs[job][1]);
-        let jobPopUpDesc = $("<p>").text(data.jobs[job][2]);
-
-        let closePopUp = $("<button>", {
-            id: "closePopUp"
-        }).text("X").click(()=>{
-            popUpCloser();
-        });
-        let closer = $("<div>",{
-                    id:"popUpcloser"
-                    }).click(()=>{
-                        popUpCloser();
-                    });
-
-        jobPopUp.append(closePopUp,jobPopUpHeader,jobPopUpTitle,jobPopUpDesc);
-        $("body").append(jobPopUp).prepend(closer).css("overflow","hidden");
-    })
-}
-
-
-</script>
 </body>
 </html>
