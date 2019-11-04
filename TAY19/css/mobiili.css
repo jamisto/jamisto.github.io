@@ -132,9 +132,10 @@
 }
 
 @media only screen and (max-width:767px){
+
     #older{
         border-left:none;
-        border-bottom:solid #009DAD 1px;
+        border-bottom:solid rgba(213,34,30,1) 2px;
         margin-bottom:40px;
     
     }
