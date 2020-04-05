@@ -1,443 +1,69 @@
-/* green rgb(144 ,190, 35)
- black rgb(29, 29 ,27)
+/* green #90BE23
+ black #0F0F0F
 */
+
+@font-face {
+    font-family: CutiveMono;
+    src: url(../fonts/CutiveMono-Regular.ttf);
+  }
 
 html{
     scroll-behavior: smooth;
 }
 body{
-    max-width: 65rem;
-    margin:0 auto;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'CutiveMono';
     margin:0 auto;
     min-width: 300px;
     font-size:25px;
     max-width: 100%;
+    display: grid;
+    grid: "menu content";
+    grid-template-columns: 309px auto;
+    background: #0F0F0F;
 }
 
 .green-text *{
-    color:rgb(144 ,190, 35);
+    color:#90BE23;
 }
 
-.green-header h1, .green-header h2{
-    color:rgb(144 ,190, 35);
-    margin:50px 0;
+p{
+    font-size:21px;
 }
+
 h1{
-    font-size:2rem;
-}
-.white-text{
-    color:white;
-}
-.black-bg{
-    background:rgb(29, 29 ,27);
+    font-size:100px;
 }
 
-.slant-bottom{
-    clip-path: polygon(
-        0 0,
-        100% 0,
-        100% 100%,
-        0 calc(99% - 6vw)
-    );
-    
-    padding-top:150px;
+h2{
+    font-size:43px;
 }
 
-#who,#works{
-    min-height:75vh;
+.active{
+    background:transparent;
+    color:#90BE23;
+}
+/***/
+
+/**Menu**/
+nav{
+    grid-area: menu;
+    margin-top:309px;
 }
 
-/*Shared*/
-#about, #works{
-    padding-top:100px;
-}
-/**/
-/*Menu */
-#menuBar li{
-    display: inline-block;
-    margin: 0px 15px;
-}
-#menuBar{
-    display:flex;
-    justify-content: center;
-    text-align:center;
-    padding:50px 0px;
-    position:fixed;
-    width:100%;
-    z-index:10;
-}
-#menuBar a{
-    text-decoration: none;
-    font-size:25px;
-}
-
-#mobileMenu{
-    display:none;
-    position:fixed;
-    z-index:9;
-    width:100%;
-    padding:10px 0;
-}
-
-#mobileMenu button{
-    border:solid rgb(144 ,190, 35);
-    border-radius:50px;
-    background: rgb(29, 29 ,27);
-    color:white;
-    padding:15px;
-    font-size:2rem;
-    margin-left:15px;
-}
-/*
-#mobileMenuContent{
-    display:none;
-    z-index:100;
-    justify-content: center;
-    text-align: center;
-}
-*/
-#closer, #popUpcloser{
-    width: 100%;
-    height: 100%;
-    z-index:10;
-    background: rgba(144 ,190, 35,0.5);
-    position:fixed;
-    margin:0;
-}
-
-#popUpcloser{
-    z-index:11;
-}
-#closer{
-    display:none;
-}
-
-/**********/
-
-/* Who*/
-#who{
-    padding-top:150px;
-    display:flex;
-    justify-content: center;
-    margin:0 auto;
-}
-
-#who h1{
-    font-size:150px;
-}
-#who h2{
-    font-size:50px;
-    padding-top:15px;
-}
-/******/
-/*About*/
-#about{
-    display:grid;
-    grid-template-areas:
-        "about image" 
-        "skills-header skills-header"
-        "skills skills";
-        
-    justify-content: center;
-    margin:0 150px;
-    padding-top:100px;
-}
-
-#about h1{
-    padding-bottom:15px;
-}
-
-.about-text{
-    grid-area:about;
-    line-height: 40px;
-    max-width: 500px;
-}
-
-.about-image{
-    grid-area:image;
-}
-.about-image img{
-    width:350px;
-    padding:5%;
-}
-
-.about-skills-header{
-    grid-area:skills-header;
-    padding:0;
-}
-
-.about-skills{
-    grid-area:skills;
-    padding-bottom:50px;
-    display:grid;
-    grid-template-columns: auto auto;
-}
-
-.about-skills div{
-    margin-bottom:25px;
-}
-
-
-
-/***********/
-
-
-/*Works*/
-#works{
-    display:grid;
-    grid-template-areas:
-        "jobs-header"
-        "jobs"
-        "works-header"
-        "work" 
-        ;
-}
-
-.works-jobs-header{
-    grid-area:jobs-header;
-    margin-left:150px;
-}
-
-.works-jobs{
-    grid-area:jobs;
-    padding-bottom:50px;
-    display:grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-evenly;
-}
-
-.works-jobs h1, .works-jobs h2{
-    color:white;
-}
-
-.works-jobs div{
-    background: rgba(144 ,190, 35,0.5);
-    width:250px;
-    text-align: center;
-    border-radius:10px;
-    padding: 0 5px;
-}
-
-.works-jobs div:hover{
-    opacity: 0.5;
-}
-
-.works-header{
-    justify-content: center;
-    grid-area:works-header;
-    margin-left:150px;
-}
-
-.pop-up{
-    background:rgb(29, 29 ,27); 
-    color:white;
-    z-index:101;
-    padding:5%;
-    display:block;
-    top:52px;
-    width:80%;
-    margin:25vh auto;
-}
-
-.pop-up >*{
+nav li{
+    border: solid 4px #90BE23;
+    border-left:none;
     padding-top:10px;
+    padding-bottom:10px;
+    padding-left:60px;
+    margin-bottom:25px;
+    background:#90BE23;
 }
+/**Menu**/
 
-.pop-up h1{
-    display: block;
-    padding-bottom: 15px;
+#content{
+    grid-area:content;
+    border:solid red;
+    padding:0 150px;
+    margin-top:150px;
 }
-
-.pop-up h2{
-    text-decoration: underline;
-    padding-bottom: 15px;
-}
-
-.jobContainer{
-    line-height: 25px;
-    max-width: 80%;
-    margin-bottom:15px;
-}
-
-#closePopUp{
-    float:right;
-    margin:15px;
-    padding:15px;
-    color:white;
-    font-size:15px;
-    background:rgb(144 ,190, 35);
-    border:none;
-    border-radius: 10px;
-}
-#closePopUp:hover{
-    opacity: 0.5;
-}
-
-.peon{
-    display:grid;
-    grid-template-columns: auto auto auto;
-    grid-area:work;
-    justify-content: space-evenly;
-}
-.peon div{
-    margin:5px;
-}
-.peon img{
-    max-width:250px;
-    margin-bottom:15px;
-}
-
-.peon a:hover{
-    opacity:0.5;
-}
-
-.peon h1{
-    margin:0;
-}
-/*contact*/
-#contact{
-    display: grid;
-    grid-template-areas: 
-        "header"
-        "contacts";
-    justify-content: center;
-    padding-bottom:150px;
-}
-
-.contact-header{
-    grid-area: header;
-
-}
-
-.contact-list{
-    grid-area: contacts;
-    font-size:1.5rem;
-    text-align: center;
-}
-
-/*******/
-
-/*mobile/other screen settings*/
-
-@media only screen and (min-width: 2000px){
-    .pop-up{
-        padding:5% 5%;
-    }
-}
-
-@media only screen and (max-width: 1090px){
-    #about{
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    }
-    .about-skills >div{
-        display:flex;
-        flex-wrap:wrap;
-        margin:0 15px;
-    }
-
-    .about-text{
-        display:flex;
-        flex-wrap: wrap;
-        width:100%;
-        margin:0px;
-    }
-    
-    .about-skills{
-        display:grid;
-        justify-content: space-evenly;
-    }
-    .about-skills > div{
-        max-width: 250px;
-    }
-    
-}
-
-@media only screen and (max-width: 800px){
-    
-    #who{
-        min-height: 40vh;
-        padding:150px 15px;
-    }
-
-    #who h1{
-        font-size:75px;
-    }
-    #who h2{
-        font-size:25px;
-    }
-    #menuBar{
-        display:flex;
-        width: 0%;
-        height: 100%;
-        position:fixed;
-        overflow:hidden;
-        transition: 0.5s;
-    }
-    #closer{
-        display:block;
-    }
-    #menuBar a{
-    }
-    #mobileMenu{
-        display:flex;
-    }
-    
-    #menuBar li{
-        padding:15px 0;
-        display: block;
-    }
-
-    #who{
-        padding-bottom:50px;
-    }
-
-    #about{
-        margin:0 25px;
-    }
-    
-    .about-image img{
-        max-width:100%;
-        float:right;
-        padding:0 0 10px 0;
-    }
-    
-    #works{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .works-header, .works-jobs-header{
-        margin-left: 25px;
-    }
-    .works-jobs, .peon{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .works-jobs div, .peon div{
-        margin-bottom:25px;
-    }
-    .pop-up{
-        min-height:50%;
-    }
-}
-
-@media only screen and (max-width: 500px){
-    .pop-up{
-        width:95%;
-        min-height: 75%;
-        margin:20% auto;
-    }
-}
-
-@media only screen and (max-height: 400px) {
-    .pop-up{
-        top:0;
-    }
-}
-/**/
