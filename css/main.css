@@ -17,13 +17,15 @@ body{
     font-size:25px;
     max-width: 100%;
     display: grid;
-    grid: "menu content";
+    grid: "menu content"
+            "carusel carusel";
     grid-template-columns: 309px auto;
     background: #0F0F0F;
+    color:white;
 }
 
-.green-text *{
-    color:#90BE23;
+.green-text{
+    color:#90BE23 ;
 }
 
 p{
@@ -39,8 +41,12 @@ h2{
 }
 
 .active{
-    background:transparent;
+    background:transparent !important;
     color:#90BE23;
+}
+
+#About, #Experience, #Works{
+    display:none;
 }
 /***/
 
@@ -63,7 +69,117 @@ nav li{
 
 #content{
     grid-area:content;
-    border:solid red;
     padding:0 150px;
     margin-top:150px;
 }
+#carusel{
+    width: 216px;
+    margin: 0 auto;
+    grid-area:carusel;
+}
+
+#carusel ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#carusel li{
+    background: #90BE23;
+    width:20px;
+    height:20px;
+    display:inline-block;
+    border-radius:20px;
+    border:4px solid #90BE23;
+}
+#carusel .left{
+	width: 0;
+    height: 0;
+    border:none;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+    border-right: 30px solid #90BE23;
+    background: none;
+    border-radius:0;
+}
+
+#carusel .right{
+	width: 0;
+    height: 0;
+    border:none;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+    border-left: 30px solid #90BE23;
+    background: none;
+    border-radius:0;
+}
+/****About******/
+#About{
+    grid:   "info pic"
+            "contact contact";
+    grid-template-columns: 65% auto;
+}
+.info{
+    padding-top:50px;
+    padding-right:60px;
+    grid-area:info;
+
+}
+.info h2{
+    padding-bottom:25px;
+}
+.pic{
+    grid-area:pic;
+}
+th{
+    padding:25px;
+}
+.img-bg{
+    margin-left:15px;
+    margin-top:15px;
+    width: 400px;
+    height: 580px;
+    background: #90BE23;
+}
+.pic img{
+    max-width: 376px;
+    float: left;
+}
+
+
+.details{
+    display:grid;
+    grid: "skills software";
+    padding-top:25px;
+}
+
+.skills{
+    grid-area:skills;
+}
+
+.software{
+    grid-area:software;
+}
+.contact{
+    grid-area: contact;
+}
+
+.contact a{
+    text-decoration: none;
+    color: #90BE23;
+}
+
+.contact a:hover{
+    text-decoration: underline;
+}
+
+.contact ul{
+    width:90%;
+    margin:0 auto;
+    padding: 25px 0;
+}
+
+.contact li{
+    display:inline-block;
+    padding:0px 75px;
+}
+/****About******/
