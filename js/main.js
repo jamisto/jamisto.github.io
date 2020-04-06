@@ -7,24 +7,67 @@ $(document).ready(()=>{
     });
 
     $("#carusel .left").click(()=>{
-        console.log(page)
         page--;
-        console.log(page)
         page = checkPage(page)
-        console.log(page)
         caruselPageChange(page);
     });
 
+    $("#carusel .right").click(()=>{
+        page++;
+        page = checkPage(page)
+        caruselPageChange(page);
+    });
+
+    buildExperience();
+
 });
+
+function buildExperience(){
+    $.getJSON("jobs.json", function (data){
+        console.log(data);
+        for(job in data.jobs){
+            console.log(data.jobs[job])
+           let employerContainer = $("<div>",{
+               class:"employer"
+           });
+           let employer =  $("<h2>",{
+               class:" employer green-text",
+           }).text(data.jobs[job].employer);
+           employerContainer.append(employer);
+
+           for(index in data.jobs[job].times){
+               let jobContainer = $("<div>",{
+                   class:"job"
+               })
+                let title = $("<p>",{
+                    class:"title green-text"
+               }).text(data.jobs[job].times[index].title);
+               jobContainer.append(title);
+
+               if(data.jobs[job].times[index].time){
+                    let time = $("<p>",{
+                        class:"time green-text"
+                    }).text(data.jobs[job].times[index].time);
+                    jobContainer.append(time);
+                }
+                let description = $("<p>",{
+                    class:"description"
+                }).text(data.jobs[job].times[index].description)
+
+                jobContainer.append(description);
+                employerContainer.append(jobContainer);
+            }
+           $("#Experience").append(employerContainer);
+        }
+    });
+}
 
 function changePage(target){
     //console.log(target);
 
-    $(".active").removeClass("active");
-    
-    $("." + target).addClass("active");
     $("#Home,#About,#Experience,#Works").css("display","none");
-
+    $(".active").removeClass("active");
+    $("." + target).addClass("active");
     $("#" + target).css("display", "grid");
 }
 
@@ -39,19 +82,13 @@ function checkPage(page){
 }
 
 function caruselPageChange(active){
-    switch(active){
-        case 1:
-            changePage("Works")
-            break;
-        case 2:
-            changePage("Experience")
-            break;
-        case 3:
-            changePage("Works")
-            break;
-        case 4:
+        if (active === 1)
             changePage("Home")
-            break;
+        else  if (active === 2)
+            changePage("About")
+        else  if (active === 3)
+            changePage("Experience")
+        else  if (active === 4)
+            changePage("Works")
     
-    }
 }

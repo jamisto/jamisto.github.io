@@ -14,8 +14,9 @@ body{
     font-family: 'CutiveMono';
     margin:0 auto;
     min-width: 300px;
-    font-size:25px;
     max-width: 100%;
+
+    font-size:25px;
     display: grid;
     grid: "menu content"
             "carusel carusel";
@@ -70,7 +71,10 @@ nav li{
 #content{
     grid-area:content;
     padding:0 150px;
-    margin-top:150px;
+    margin-top:100px;
+    min-height: 80vh;
+    max-height: 80vh;
+    overflow: auto;
 }
 #carusel{
     width: 216px;
@@ -183,3 +187,40 @@ th{
     padding:0px 75px;
 }
 /****About******/
+
+/****exp****/
+
+
+.employer{
+}
+
+.employer, .description{
+    padding-bottom:25px;
+}
+.job, .employer{
+    padding-bottom: 15px;
+}
+/****exp****/
+
+/***Works****/
+
+.work{
+    display: grid;
+    grid: "pic info"
+}
+
+.work-img{
+    grid-area:pic;
+    max-width: 250px;
+}
+
+.work-img img{
+    width: 250px;
+    padding:0;
+}
+
+.work-info{
+    grid-area:info;
+    padding-top:25px;
+}
+/***Works****/
