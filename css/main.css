@@ -6,20 +6,16 @@
     font-family: CutiveMono;
     src: url(../fonts/CutiveMono-Regular.ttf);
   }
-
-
 body{
+    background: #0F0F0F;
+}
+
+#container{
     font-family: 'CutiveMono';
     margin:0 auto;
     min-width: 300px;
     max-width: 100%;
-
     font-size:25px;
-    display: grid;
-    grid: "menu content"
-            "carusel carusel";
-    grid-template-columns: 309px auto;
-    background: #0F0F0F;
     color:white;
 }
 
@@ -48,14 +44,21 @@ h2{
     display:none;
 }
 /***/
+#Home{
+    margin-top: 150px;
+}
 
 /**Menu**/
 nav{
-    grid-area: menu;
+    display:block;
     margin-top:309px;
+    float: left;
+
 }
 
 nav li{
+    max-width: 200px;
+    min-width: 200px;
     border: solid 4px #90BE23;
     border-left:none;
     padding-top:10px;
@@ -63,12 +66,15 @@ nav li{
     padding-left:60px;
     margin-bottom:25px;
     background:#90BE23;
+    cursor: pointer;
 }
 /**Menu**/
 
 #content{
-    grid-area:content;
-    padding:0 150px;
+    display: flex;
+    max-width:100%;
+    padding-left:100px;
+    padding-right:10px;
     margin-top:100px;
     min-height: 80vh;
     max-height: 80vh;
@@ -77,7 +83,6 @@ nav li{
 #carusel{
     width: 216px;
     margin: 0 auto;
-    grid-area:carusel;
 }
 
 #carusel ul{
@@ -116,21 +121,19 @@ nav li{
 }
 /****About******/
 #About{
-    grid:   "info pic"
-            "contact contact";
-    grid-template-columns: 65% auto;
+
 }
 .info{
+    display:inline-block;
     padding-top:50px;
-    padding-right:60px;
-    grid-area:info;
-
+    padding-right: 80px;
+    vertical-align:top;   
+    max-width: 55%;
 }
 .info h2{
     padding-bottom:25px;
 }
 .pic{
-    grid-area:pic;
 }
 th{
     padding:25px;
@@ -142,27 +145,20 @@ th{
     height: 580px;
     background: #90BE23;
 }
+.pic{
+    vertical-align:top;   
+    display:inline-block;
+}
 .pic img{
     max-width: 376px;
     float: left;
 }
 
 
-.details{
-    display:grid;
-    grid: "skills software";
+.software,.skills{
     padding-top:25px;
-}
-
-.skills{
-    grid-area:skills;
-}
-
-.software{
-    grid-area:software;
-}
-.contact{
-    grid-area: contact;
+    display: inline-block;
+    vertical-align:top;   
 }
 
 .contact a{
@@ -189,7 +185,9 @@ th{
 /****exp****/
 
 
-
+.employer{
+    max-width: 80%
+}
 .employer, .description{
     padding-bottom:25px;
 }
@@ -200,23 +198,14 @@ th{
 
 /***Works****/
 
-.work{
-    display: grid;
-    grid: "pic info"
+.work >*{
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 50%;
 }
-
-.work-img{
-    grid-area:pic;
-    max-width: 250px;
-}
-
 .work-img img{
     width: 200px;
     padding:0;
 }
 
-.work-info{
-    grid-area:info;
-    padding-top:25px;
-}
 /***Works****/

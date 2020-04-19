@@ -69,7 +69,7 @@ function changePage(target){
     $("#Home,#About,#Experience,#Works").css("display","none");
     $(".active").removeClass("active");
     $("." + target).addClass("active");
-    $("#" + target).css("display", "grid");
+    $("#" + target).css("display", "inline-block");
 }
 
 function checkPage(page){
