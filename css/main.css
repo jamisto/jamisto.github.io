@@ -7,9 +7,7 @@
     src: url(../fonts/CutiveMono-Regular.ttf);
   }
 
-html{
-    scroll-behavior: smooth;
-}
+
 body{
     font-family: 'CutiveMono';
     margin:0 auto;
@@ -191,8 +189,6 @@ th{
 /****exp****/
 
 
-.employer{
-}
 
 .employer, .description{
     padding-bottom:25px;
@@ -215,7 +211,7 @@ th{
 }
 
 .work-img img{
-    width: 250px;
+    width: 200px;
     padding:0;
 }
 

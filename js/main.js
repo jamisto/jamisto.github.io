@@ -1,9 +1,10 @@
 $(document).ready(()=>{
-    var page = 0;
+    var page = 1;
     $("nav li").click((event)=>{
         let target = $(event.target).text();
         changePage(target);
         $(event.target).addClass("active");
+        page = parseInt($("#carusel .active").attr("val"));
     });
 
     $("#carusel .left").click(()=>{
@@ -74,8 +75,8 @@ function changePage(target){
 function checkPage(page){
     if (page < 1){
         return 4
-    } else if (page >5){
-        return 0
+    } else if (page > 4){
+        return 1
     }else{
         return page;
     }
