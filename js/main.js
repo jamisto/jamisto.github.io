@@ -7,6 +7,15 @@ $(document).ready(()=>{
         page = parseInt($("#carusel .active").attr("val"));
     });
 
+    $("#carusel li").click((event)=>{
+        let target = $(event.target).attr("class").split(" ");
+        target = target[0]
+        console.log(target)
+        changePage(target);
+        $(event.target).addClass("active");
+        page = parseInt($("#carusel .active").attr("val"));
+    })
+
     $("#carusel .left").click(()=>{
         page--;
         page = checkPage(page)
@@ -25,9 +34,7 @@ $(document).ready(()=>{
 
 function buildExperience(){
     $.getJSON("jobs.json", function (data){
-        console.log(data);
         for(job in data.jobs){
-            console.log(data.jobs[job])
            let employerContainer = $("<div>",{
                class:"employer"
            });
@@ -64,7 +71,6 @@ function buildExperience(){
 }
 
 function changePage(target){
-    //console.log(target);
 
     $("#Home,#About,#Experience,#Works").css("display","none");
     $(".active").removeClass("active");
