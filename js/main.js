@@ -5,6 +5,7 @@ $(document).ready(()=>{
         changePage(target);
         $(event.target).addClass("active");
         page = parseInt($("#carusel .active").attr("val"));
+        closeMenu();
     });
 
     $("#carusel li").click((event)=>{
@@ -27,9 +28,8 @@ $(document).ready(()=>{
         page = checkPage(page)
         caruselPageChange(page);
     });
-
+ 
     buildExperience();
-
 });
 
 function buildExperience(){
@@ -65,9 +65,10 @@ function buildExperience(){
                 jobContainer.append(description);
                 employerContainer.append(jobContainer);
             }
-           $("#Experience").append(employerContainer);
+           $("#exp").append(employerContainer);
         }
     });
+
 }
 
 function changePage(target){
@@ -75,7 +76,7 @@ function changePage(target){
     $("#Home,#About,#Experience,#Works").css("display","none");
     $(".active").removeClass("active");
     $("." + target).addClass("active");
-    $("#" + target).css("display", "inline-block");
+    $("#" + target).css("display", "inline-flex");
 }
 
 function checkPage(page){
@@ -98,4 +99,37 @@ function caruselPageChange(active){
         else  if (active === 4)
             changePage("Works")
     
+}
+
+function openMenu(){
+    $("nav").css("width", "50%");
+    let closer = $("<div>",{
+        id:"closer"
+    }).click(()=>{
+        closeMenu();
+        $("body").css("overflow","initial");
+    });
+    
+    $(".bar1").css("transform","rotate(-45deg)  translate(-9px, 6px)")
+    $(".bar2").css("transform","rotate(45deg) translate(-2px, 2px)")
+    $(".bar3").css("opacity", "0")
+
+    $("body").prepend(closer);
+    $("#menuBar a").click(()=>{
+        closeMenu();
+        $("body").css("overflow","initial");
+    });
+    $("body").css("overflow","hidden");
+    $("#open-nav").attr("onclick","closeMenu()")
+}
+
+function closeMenu(){
+    $("#open-nav").attr("onclick","openMenu()")
+
+    $(".bar1").css("transform","")
+    $(".bar2").css("transform","")
+    $(".bar3").css("opacity","")
+    
+    $("nav").css("width", "");
+    $("#closer").remove();
 }

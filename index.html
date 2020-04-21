@@ -12,20 +12,30 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
 </head>
 <body>
+<div id="open-nav" onclick=openMenu(this)>
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+</div>
 <div id="container">
+    
     <nav>
-        <ul>
-            <li class="Home active">Home</li>
-            <li class="About" >About</li>
-            <li class="Experience" >Experience</li>
-            <li class="Works" >Works</li>
-        </ul>
+        <div>
+            <ul>
+                <li class="Home active">Home</li>
+                <li class="About" >About</li>
+                <li class="Experience" >Experience</li>
+                <li class="Works" >Works</li>
+            </ul>
+        </div>
     </nav>
 
     <div id="content">
         <div id="Home">
-            <h1 class="green-text"> Hi,<br>I'm Jani</h1>
-            <h2>A "somewhat experienced" frontend developer</h2>
+            <div>
+                <h1 class="green-text"> Hi,<br>I'm Jani</h1>
+                <h2>A "somewhat experienced" frontend developer</h2>
+            </div>
         </div>
         <div id="About">
             <div class="info">
@@ -65,33 +75,38 @@
                 </div>
             </div>
             <div class="pic">
-                <img src="/img/kuva.jpg"/>
+                <img src="./img/kuva.jpg" alt="profiili"/>
                 <div class="img-bg"></div>
             </div>
         </div>
         <div id="Experience">
-            
+            <div id="exp">
+
+            </div>
         </div>
         <div id="Works">
-            <div class="work">
-                <div class="work-img"><a href="TAY/index.html" target="_blank"><img src="/img/TAY18.png" alt="Taideakatemia1"/></a></div>
-                <div class="work-info">
-                    <h2 class="green-text">Taideakatemian Yö 2018</h2>
-                    <p>Coded a website for their 2018 event.</p>
+            <div class="jobs">
+
+                <div class="work">
+                    <div class="work-img"><a href="TAY/index.html" target="_blank"><img src="./img/TAY18.png" alt="Taideakatemia1"/></a></div>
+                    <div class="work-info">
+                        <h2 class="green-text">Taideakatemian Yö 2018</h2>
+                        <p>Coded a website for their 2018 event.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="work">
-                <div class="work-img"><a href="TAY19/index.html" target="_blank"><img src="/img/TAY19.jpg" alt="Taideakatemia2"/></a></div>
-                <div class="work-info">
-                    <h2 class="green-text">Taideakatemian Yö 2019</h2>
-                    <p>Updated the website I had made for them the previous year.</p>
+                <div class="work">
+                    <div class="work-img"><a href="TAY19/index.html" target="_blank"><img src="./img/TAY19.jpg" alt="Taideakatemia2"/></a></div>
+                    <div class="work-info">
+                        <h2 class="green-text">Taideakatemian Yö 2019</h2>
+                        <p>Updated the website I had made for them the previous year.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="work">
-                <div class="work-img"><a href="http://rahikkasirja.fi" target="_blank"><img src="/img/sirja.png" alt="sirjaRahikka"/></a></div>
-                <div class="work-info">
-                    <h2 class="green-text">Portfolio for Sirja Rahikka</h2>
-                    <p>Coded this portfolio site. The live version is a static HTML page, but I've also made a WordPress version for easy updating, which is  not currently in use due to the hosting service.</p>
+                <div class="work">
+                    <div class="work-img"><a href="http://rahikkasirja.fi" target="_blank"><img src="./img/sirja.png" alt="sirjaRahikka"/></a></div>
+                    <div class="work-info">
+                        <h2 class="green-text">Portfolio for Sirja Rahikka</h2>
+                        <p>Coded this portfolio site. The live version is a static HTML page, but I've also made a WordPress version for easy updating, which is  not currently in use due to the hosting service.</p>
+                    </div>
                 </div>
             </div>
         </div>

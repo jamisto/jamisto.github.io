@@ -8,6 +8,7 @@
   }
 body{
     background: #0F0F0F;
+    min-width: 500px;
 }
 
 #container{
@@ -48,7 +49,42 @@ h2{
     margin-top: 150px;
 }
 
+/***Mobile nav***/
+#open-nav{
+    display:none;
+    position: fixed;
+    right:15px;
+    top:20px;
+    cursor: pointer;
+    z-index: 15;
+    background-size: cover;
+    width:50px;
+}
+.bar1, .bar2, .bar3{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+#closer{
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: #0F0F0F;
+    opacity: 0.9;
+    position:fixed;
+    margin:0;
+    top:0;
+    transition: 0.5s;
+}
+
+/***Mobile nav***/
+
 /**Menu**/
+
 nav{
     display:block;
     margin-top:225px;
@@ -203,15 +239,81 @@ th{
 /****exp****/
 
 /***Works****/
-
+.work{
+    margin-bottom:55px;
+}
 .work >*{
     display: inline-block;
     vertical-align: middle;
     max-width: 50%;
 }
 .work-img img{
-    width: 200px;
+    max-width: 200px;
     padding:0;
 }
 
 /***Works****/
+
+@media only screen and (max-width:1141px){
+    #About{
+        flex-direction: column;
+    }
+    .pic{
+        order:-1;
+    }
+    .info{
+        padding-right:0;
+    }
+    .info p{
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width:980px){
+    #open-nav{
+        display:block;
+    }
+    .active{
+        border: solid 4px #0F0F0F;
+        color:#0F0F0F
+    }
+    #content >*{
+        align-items: center;
+    }
+    #content{
+        padding:0;
+    }
+    nav{
+        width:0;
+        height:100%;
+        overflow: hidden;
+        right:0;
+        position: absolute;
+        margin-top:0px;
+        top: 0;
+        float:none;
+        z-index: 10;
+        background: #90BE23;
+        transition: 0.5s;
+        padding-top: 150px;
+    }
+    nav li{
+        padding-left:0;
+        text-align: center;
+        max-width: 100%;
+    }
+    #exp{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top:750px;
+        
+    }
+    .jobs{
+        margin-top:150px;
+    }
+    .work-img img{
+        max-width: 100px;
+        padding:0;
+    }
+}
