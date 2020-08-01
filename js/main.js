@@ -139,11 +139,12 @@ function openMenu(){
         $("body").css("overflow","initial");
     });
     $("body").css("overflow","hidden");
-    $("#open-nav").attr("onclick","closeMenu()")
+    $("#open-nav").attr("onclick","closeMenu()").css("background","transparent")
+    
 }
 
 function closeMenu(){
-    $("#open-nav").attr("onclick","openMenu()")
+    $("#open-nav").attr("onclick","openMenu()").css("background","#0F0F0F")
 
     $(".bar1").css("transform","")
     $(".bar2").css("transform","")
