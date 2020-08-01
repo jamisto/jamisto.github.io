@@ -28,7 +28,26 @@ $(document).ready(()=>{
         page = checkPage(page)
         caruselPageChange(page);
     });
- 
+
+    if(window.screen.availWidth < 992){
+        $('nav').removeClass('col-lg-2')
+        $('#content').removeClass('col-lg-8').addClass('col-lg-12')
+    }
+    $(window).bind("resize",()=>{
+        if($(this).width() <=992){
+            $('nav').removeClass('col-lg-2')
+            $('#content').removeClass('col-lg-8').addClass('col-lg-12')
+
+        }
+        else{
+            $('nav').addClass('col-lg-2')
+            $('#content').removeClass('col-lg-12').addClass('col-lg-8')
+            if($("#closer").length> 0){
+                $("#closer").remove()
+            }
+        }
+    });
+
     buildExperience();
 });
 

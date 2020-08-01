@@ -9,6 +9,7 @@
     <script src="js/main.js"></script>
     <link rel="shortcut icon" type="image/png" href="img/llama.png">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap-grid.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
 </head>
 <body>
@@ -17,9 +18,9 @@
     <div class="bar2"></div>
     <div class="bar3"></div>
 </div>
-<div id="container">
+<div id="container" class="row">
     
-    <nav>
+    <nav class="col-lg-2">
         <div>
             <ul>
                 <li class="Home active">Home</li>
@@ -30,23 +31,21 @@
         </div>
     </nav>
 
-    <div id="content">
+    <div id="content" class="col-lg-8">
         <div id="Home">
             <div>
                 <h1 class="green-text"> Hi,<br>I'm Jani</h1>
                 <h2>A "somewhat experienced" frontend developer</h2>
             </div>
         </div>
-        <div id="About">
-            <div class="info">
-
+        <div id="About" class="row">
+            <div id="info" class="col-lg-8 col-md-8">
                 <h2 class="green-text">Jani Laamanen</h2>
-                <p>
-                    Student from Turku University of Applied Sciences, 
-                    studying the field of Business IT. I'm intrested in frontend development as well as Information security, which will be my specialisation.
+                <p>Student from Turku University of Applied Sciences, studying the field of Business IT. 
+                    I'm intrested in frontend development as well as Information security, which will be my specialisation.
                 </p>
-                <div class="details">
-                    <div class="skills">
+                <div id="skills" class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
                         <h3 class="green-text">Skills</h3>
                         <ul>
                             <li>HTML</li>
@@ -56,7 +55,7 @@
                             <li>Wordpress</li>
                         </ul>
                     </div>
-                    <div class="software">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
                         <h3 class="green-text">Software</h3>
                         <ul>
                             <li>Photoshop</li>
@@ -74,43 +73,40 @@
                     </ul>
                 </div>
             </div>
-            <div class="pic">
-                <img src="./img/kuva.jpg" alt="profiili"/>
-                <div class="img-bg"></div>
+            <div id="profile" class="col-lg-4 col-md-4">
+                <img src="./img/kuva.jpg" alt="profile image">
+                <div id="profile-bg"></div>
             </div>
         </div>
         <div id="Experience">
             <div id="exp">
-
             </div>
         </div>
         <div id="Works">
             <div class="jobs">
-
-                <div class="work">
-                    <div class="work-img"><a href="TAY/index.html" target="_blank"><img src="./img/TAY18.png" alt="Taideakatemia1"/></a></div>
-                    <div class="work-info">
+                <div class="work row">
+                    <div class="work-img col-lg-3 col-md-3"><a href="TAY/index.html" target="_blank"><img src="./img/TAY18.png" alt="Taideakatemia1"/></a></div>
+                    <div class="work-info col-lg-9 col-md-9">
                         <h2 class="green-text">Taideakatemian Yö 2018</h2>
                         <p>Coded a website for their 2018 event.</p>
                     </div>
                 </div>
-                <div class="work">
-                    <div class="work-img"><a href="TAY19/index.html" target="_blank"><img src="./img/TAY19.jpg" alt="Taideakatemia2"/></a></div>
-                    <div class="work-info">
+                <div class="work row">
+                    <div class="work-img col-lg-3 col-md-3"><a href="TAY19/index.html" target="_blank"><img src="./img/TAY19.jpg" alt="Taideakatemia2"/></a></div>
+                    <div class="work-info col-lg-9 col-md-9">
                         <h2 class="green-text">Taideakatemian Yö 2019</h2>
                         <p>Updated the website I had made for them the previous year.</p>
                     </div>
                 </div>
-                <div class="work">
-                    <div class="work-img"><a href="http://rahikkasirja.fi" target="_blank"><img src="./img/sirja.png" alt="sirjaRahikka"/></a></div>
-                    <div class="work-info">
+                <div class="work row">
+                    <div class="work-img col-lg-3 col-md-3"><a href="http://rahikkasirja.fi" target="_blank"><img src="./img/sirja.png" alt="sirjaRahikka"/></a></div>
+                    <div class="work-info col-lg-9 col-md-9">
                         <h2 class="green-text">Portfolio for Sirja Rahikka</h2>
                         <p>Coded this portfolio site. The live version is a static HTML page, but I've also made a WordPress version for easy updating, which is  not currently in use due to the hosting service.</p>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
 

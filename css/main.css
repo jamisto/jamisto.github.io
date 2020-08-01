@@ -41,6 +41,9 @@ h2{
     color:#90BE23;
 }
 
+.row{
+    margin:0px;
+}
 #About, #Experience, #Works{
     display:none;
 }
@@ -94,12 +97,12 @@ nav{
 
 nav li{
     max-width: 200px;
-    min-width: 200px;
+    min-width: 250px;
     border: solid 4px #90BE23;
     border-left:none;
     padding-top:10px;
     padding-bottom:10px;
-    padding-left:60px;
+    padding-left:40px;
     margin-bottom:25px;
     background:#90BE23;
     cursor: pointer;
@@ -110,7 +113,7 @@ nav li{
     display: flex;
     max-width:100%;
     padding-left:100px;
-    padding-right:10px;
+    padding-right:20px;
     margin-top:100px;
     min-height: 80vh;
     max-height: 80vh;
@@ -163,125 +166,53 @@ nav li{
     background: none;
     border-radius:0;
 }
-/****About******/
-#About{
-}
-.info{
-    display:inline-block;
-    padding-top:50px;
-    padding-right: 80px;
-    vertical-align:top;   
-    max-width: 55%;
-}
-.info h2{
-    padding-bottom:25px;
-}
-.info p{
-    max-width: 90%;
-}
-th{
-    padding:25px;
-}
-.img-bg{
-    margin-left:15px;
-    margin-top:15px;
-    width: 300px;
-    height: 430px;
-    background: #90BE23;
-}
-.pic{
-    margin-top: 50px;
-    vertical-align:top;   
-    display:inline-block;
-}
-.pic img{
-    max-width: 276px;
-    float: left;
-}
-
-
-.software,.skills{
-    padding-top:25px;
-    display: inline-block;
-    vertical-align:top;   
-}
-
-.contact{
-    margin-top: 15px;
-}
-.contact a{
+/*** About ***/
+#About a{
+    color:white;
     text-decoration: none;
-    color: white;
 }
-
-.contact a:hover{
+#About a:hover{
     text-decoration: underline;
 }
-/****About******/
 
-/****exp****/
-
-
-.employer{
-    max-width: 80%
+#About img{
+    max-width: 100%;
+    float: left;
 }
-.employer, .description{
-    padding-bottom:25px;
+#info{
+    padding-right: 80px;
 }
-
-.description{
-    max-width: 60%;
+#info > div{
+    margin-top:15px;
 }
 
-.job, .employer{
+
+/** Experience ***/
+.job, .employer {
     padding-bottom: 15px;
 }
-/****exp****/
-
-/***Works****/
+.description {
+    max-width: 60%;
+}
+/** works **/
+#Works img{
+    max-width:80%;
+}
 .work{
-    margin-bottom:55px;
-}
-.work >*{
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 50%;
-}
-.work-img img{
-    max-width: 200px;
-    padding:0;
+    align-items: center;
 }
 
-/***Works****/
-
-@media only screen and (max-width:1141px){
-    #About{
-        flex-direction: column;
+@media only screen and (max-width:992px){
+    #content{
+        padding-left: 20px;
+        padding-right: 20px;
     }
-    .pic{
-        order:-1;
-    }
-    .info{
-        padding-right:0;
-    }
-    .info p{
-        max-width: 100%;
-    }
-}
-
-@media only screen and (max-width:980px){
     #open-nav{
         display:block;
     }
     .active{
         border: solid 4px #0F0F0F;
         color:#0F0F0F
-    }
-    #content >*{
-        align-items: center;
-    }
-    #content{
-        padding:0;
     }
     nav{
         width:0;
@@ -302,18 +233,17 @@ th{
         text-align: center;
         max-width: 100%;
     }
-    #exp{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top:750px;
-        
-    }
-    .jobs{
-        margin-top:150px;
-    }
-    .work-img img{
-        max-width: 100px;
+    #info{
         padding:0;
+    }
+}
+@media only screen and (max-width:768px){
+    
+    #profile{
+        max-width:275px;
+        order:-1;
+        align-items: center;
+        display:block;
+        margin:0 auto;
     }
 }
