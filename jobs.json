@@ -26,6 +26,17 @@
             }
         
         },
+        "Noja Rahoitus":{
+            "employer":"Noja Rahoitus",
+            "times":{
+                "1":{
+
+                    "title":"Software Developer",
+                    "time":"10.08.2020 - Present day",
+                    "description":"Maintaining and development of their internal systems. Having led multiple big projects to finish."
+                }
+            }
+        },
         "Arts":{
             "employer":"Turku Arts Academy",
             "times":{
