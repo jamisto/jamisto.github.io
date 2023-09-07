@@ -121,7 +121,7 @@ function caruselPageChange(active){
 }
 
 function openMenu(){
-    $("nav").css("width", "50%");
+    $("nav").css("width", "70vw");
     let closer = $("<div>",{
         id:"closer"
     }).click(()=>{
@@ -151,5 +151,6 @@ function closeMenu(){
     $(".bar3").css("opacity","")
     
     $("nav").css("width", "");
+    $("body").css("overflow","auto");
     $("#closer").remove();
 }
