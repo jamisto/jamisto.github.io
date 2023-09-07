@@ -1,443 +1,250 @@
-/* green rgb(144 ,190, 35)
- black rgb(29, 29 ,27)
+/* green #90BE23
+ black #0F0F0F
 */
 
-html{
-    scroll-behavior: smooth;
-}
+@font-face {
+    font-family: CutiveMono;
+    src: url(../fonts/CutiveMono-Regular.ttf);
+  }
 body{
-    max-width: 65rem;
+    background: #0F0F0F;
+    min-width: 354px;
+}
+
+#container{
+    font-family: 'CutiveMono';
     margin:0 auto;
-    font-family: 'Roboto Condensed', sans-serif;
-    margin:0 auto;
-    min-width: 300px;
-    font-size:25px;
     max-width: 100%;
-}
-
-.green-text *{
-    color:rgb(144 ,190, 35);
-}
-
-.green-header h1, .green-header h2{
-    color:rgb(144 ,190, 35);
-    margin:50px 0;
-}
-h1{
-    font-size:2rem;
-}
-.white-text{
-    color:white;
-}
-.black-bg{
-    background:rgb(29, 29 ,27);
-}
-
-.slant-bottom{
-    clip-path: polygon(
-        0 0,
-        100% 0,
-        100% 100%,
-        0 calc(99% - 6vw)
-    );
-    
-    padding-top:150px;
-}
-
-#who,#works{
-    min-height:75vh;
-}
-
-/*Shared*/
-#about, #works{
-    padding-top:100px;
-}
-/**/
-/*Menu */
-#menuBar li{
-    display: inline-block;
-    margin: 0px 15px;
-}
-#menuBar{
-    display:flex;
-    justify-content: center;
-    text-align:center;
-    padding:50px 0px;
-    position:fixed;
-    width:100%;
-    z-index:10;
-}
-#menuBar a{
-    text-decoration: none;
     font-size:25px;
-}
-
-#mobileMenu{
-    display:none;
-    position:fixed;
-    z-index:9;
-    width:100%;
-    padding:10px 0;
-}
-
-#mobileMenu button{
-    border:solid rgb(144 ,190, 35);
-    border-radius:50px;
-    background: rgb(29, 29 ,27);
     color:white;
-    padding:15px;
-    font-size:2rem;
-    margin-left:15px;
 }
-/*
-#mobileMenuContent{
+
+.green-text{
+    color:#90BE23 ;
+}
+
+p{
+    font-size:21px;
+}
+
+h1{
+    font-size:100px;
+}
+
+h2{
+    font-size:43px;
+}
+
+.active{
+    background:transparent !important;
+    color:#90BE23;
+}
+
+.row{
+    margin:0px;
+}
+#About, #Experience, #Works{
     display:none;
-    z-index:100;
-    justify-content: center;
-    text-align: center;
 }
-*/
-#closer, #popUpcloser{
+/***/
+
+/***Mobile nav***/
+#open-nav{
+    display:none;
+    position: fixed;
+    right:15px;
+    top:20px;
+    cursor: pointer;
+    z-index: 15;
+    background-size: cover;
+    width:50px;
+    background:#0F0F0F;
+    padding:5px;
+}
+.bar1, .bar2, .bar3{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+#closer{
     width: 100%;
     height: 100%;
-    z-index:10;
-    background: rgba(144 ,190, 35,0.5);
+    z-index: 5;
+    background: #0F0F0F;
+    opacity: 0.9;
     position:fixed;
     margin:0;
+    top:0;
+    transition: 0.5s;
 }
 
-#popUpcloser{
-    z-index:11;
-}
-#closer{
-    display:none;
+/***Mobile nav***/
+
+/**Menu**/
+
+nav{
+    display:block;
+    margin-top:225px;
+    float: left;
+
 }
 
-/**********/
-
-/* Who*/
-#who{
-    padding-top:150px;
-    display:flex;
-    justify-content: center;
-    margin:0 auto;
+nav li{
+    max-width: 200px;
+    min-width: 250px;
+    border: solid 4px #90BE23;
+    border-left:none;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:40px;
+    margin-bottom:25px;
+    background:#90BE23;
+    cursor: pointer;
 }
+/**Menu**/
 
-#who h1{
-    font-size:150px;
+#content{
+    display: flex;
+    max-width:100%;
+    padding-left:100px;
+    padding-right:20px;
+    margin-top:100px;
+    min-height: 80vh;
+    max-height: 80vh;
 }
-#who h2{
-    font-size:50px;
+#carusel{
+    width: 216px;
+    margin: 0 auto;
     padding-top:15px;
 }
-/******/
-/*About*/
-#about{
-    display:grid;
-    grid-template-areas:
-        "about image" 
-        "skills-header skills-header"
-        "skills skills";
-        
-    justify-content: center;
-    margin:0 150px;
-    padding-top:100px;
-}
 
-#about h1{
-    padding-bottom:15px;
-}
-
-.about-text{
-    grid-area:about;
-    line-height: 40px;
-    max-width: 500px;
-}
-
-.about-image{
-    grid-area:image;
-}
-.about-image img{
-    width:350px;
-    padding:5%;
-}
-
-.about-skills-header{
-    grid-area:skills-header;
-    padding:0;
-}
-
-.about-skills{
-    grid-area:skills;
-    padding-bottom:50px;
-    display:grid;
-    grid-template-columns: auto auto;
-}
-
-.about-skills div{
-    margin-bottom:25px;
-}
-
-
-
-/***********/
-
-
-/*Works*/
-#works{
-    display:grid;
-    grid-template-areas:
-        "jobs-header"
-        "jobs"
-        "works-header"
-        "work" 
-        ;
-}
-
-.works-jobs-header{
-    grid-area:jobs-header;
-    margin-left:150px;
-}
-
-.works-jobs{
-    grid-area:jobs;
-    padding-bottom:50px;
-    display:grid;
-    grid-template-columns: auto auto auto;
+#carusel li:hover{
+    cursor: pointer;
+} 
+#carusel ul{
+    display: flex;
+    align-items: center;
     justify-content: space-evenly;
 }
-
-.works-jobs h1, .works-jobs h2{
-    color:white;
+#carusel li{
+    background: #90BE23;
+    width:15px;
+    height:15px;
+    display:inline-block;
+    border-radius:20px;
+    border:4px solid #90BE23;
 }
-
-.works-jobs div{
-    background: rgba(144 ,190, 35,0.5);
-    width:250px;
-    text-align: center;
-    border-radius:10px;
-    padding: 0 5px;
+#carusel button{
+    outline:none;
 }
-
-.works-jobs div:hover{
-    opacity: 0.5;
-}
-
-.works-header{
-    justify-content: center;
-    grid-area:works-header;
-    margin-left:150px;
-}
-
-.pop-up{
-    background:rgb(29, 29 ,27); 
-    color:white;
-    z-index:101;
-    padding:5%;
-    display:block;
-    top:52px;
-    width:80%;
-    margin:25vh auto;
-}
-
-.pop-up >*{
-    padding-top:10px;
-}
-
-.pop-up h1{
-    display: block;
-    padding-bottom: 15px;
-}
-
-.pop-up h2{
-    text-decoration: underline;
-    padding-bottom: 15px;
-}
-
-.jobContainer{
-    line-height: 25px;
-    max-width: 80%;
-    margin-bottom:15px;
-}
-
-#closePopUp{
-    float:right;
-    margin:15px;
-    padding:15px;
-    color:white;
-    font-size:15px;
-    background:rgb(144 ,190, 35);
+#carusel .left{
+	width: 0;
+    height: 0;
+    margin-right:5px;
     border:none;
-    border-radius: 10px;
-}
-#closePopUp:hover{
-    opacity: 0.5;
-}
-
-.peon{
-    display:grid;
-    grid-template-columns: auto auto auto;
-    grid-area:work;
-    justify-content: space-evenly;
-}
-.peon div{
-    margin:5px;
-}
-.peon img{
-    max-width:250px;
-    margin-bottom:15px;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+    border-right: 30px solid #90BE23;
+    background: none;
+    border-radius:0;
 }
 
-.peon a:hover{
-    opacity:0.5;
+#carusel .right{
+	width: 0;
+    height: 0;
+    margin-left:5px;
+    border:none;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+    border-left: 30px solid #90BE23;
+    background: none;
+    border-radius:0;
+}
+/*** About ***/
+#About a{
+    color:white;
+    text-decoration: none;
+}
+#About a:hover{
+    text-decoration: underline;
 }
 
-.peon h1{
-    margin:0;
+#About img{
+    max-width: 100%;
+    float: left;
 }
-/*contact*/
-#contact{
-    display: grid;
-    grid-template-areas: 
-        "header"
-        "contacts";
-    justify-content: center;
-    padding-bottom:150px;
+#info{
+    padding-right: 80px;
+}
+#info > div{
+    margin-top:15px;
 }
 
-.contact-header{
-    grid-area: header;
 
+/** Experience ***/
+.job, .employer {
+    padding-bottom: 15px;
+}
+.description {
+    max-width: 60%;
+}
+/** works **/
+#Works img{
+    max-width:80%;
+}
+.work{
+    align-items: center;
 }
 
-.contact-list{
-    grid-area: contacts;
-    font-size:1.5rem;
-    text-align: center;
-}
-
-/*******/
-
-/*mobile/other screen settings*/
-
-@media only screen and (min-width: 2000px){
-    .pop-up{
-        padding:5% 5%;
+@media only screen and (max-width:992px){
+    #content{
+        padding-left: 20px;
+        padding-right: 20px;
     }
-}
-
-@media only screen and (max-width: 1090px){
-    #about{
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    }
-    .about-skills >div{
-        display:flex;
-        flex-wrap:wrap;
-        margin:0 15px;
-    }
-
-    .about-text{
-        display:flex;
-        flex-wrap: wrap;
-        width:100%;
-        margin:0px;
-    }
-    
-    .about-skills{
-        display:grid;
-        justify-content: space-evenly;
-    }
-    .about-skills > div{
-        max-width: 250px;
-    }
-    
-}
-
-@media only screen and (max-width: 800px){
-    
-    #who{
-        min-height: 40vh;
-        padding:150px 15px;
-    }
-
-    #who h1{
-        font-size:75px;
-    }
-    #who h2{
-        font-size:25px;
-    }
-    #menuBar{
-        display:flex;
-        width: 0%;
-        height: 100%;
-        position:fixed;
-        overflow:hidden;
-        transition: 0.5s;
-    }
-    #closer{
+    #open-nav{
         display:block;
     }
-    #menuBar a{
+    .active{
+        border: solid 4px #0F0F0F;
+        color:#0F0F0F
     }
-    #mobileMenu{
-        display:flex;
+    nav{
+        width:0;
+        height:100%;
+        overflow: hidden;
+        right:0;
+        position: fixed;
+        margin-top:0px;
+        top: 0;
+        float:none;
+        z-index: 10;
+        background: #90BE23;
+        transition: 0.5s;
+        padding-top: 150px;
     }
-    
-    #menuBar li{
-        padding:15px 0;
-        display: block;
+    nav li{
+        padding-left:0;
+        text-align: center;
+        max-width: 100%;
     }
-
-    #who{
-        padding-bottom:50px;
+    #info{
+        padding:0;
     }
-
-    #about{
-        margin:0 25px;
-    }
-    
-    .about-image img{
-        max-width:100%;
-        float:right;
-        padding:0 0 10px 0;
-    }
-    
-    #works{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .works-header, .works-jobs-header{
-        margin-left: 25px;
-    }
-    .works-jobs, .peon{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .works-jobs div, .peon div{
-        margin-bottom:25px;
-    }
-    .pop-up{
-        min-height:50%;
+    .work{
+        padding-bottom:25px;
     }
 }
-
-@media only screen and (max-width: 500px){
-    .pop-up{
-        width:95%;
-        min-height: 75%;
-        margin:20% auto;
+@media only screen and (max-width:768px){
+    
+    #profile{
+        max-width:275px;
+        order:-1;
+        align-items: center;
+        display:block;
+        margin:0 auto;
     }
 }
-
-@media only screen and (max-height: 400px) {
-    .pop-up{
-        top:0;
-    }
-}
-/**/

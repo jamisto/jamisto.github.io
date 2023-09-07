@@ -4,119 +4,105 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Jani Laamanen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="img/llama.png">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap-grid.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
 </head>
 <body>
-<!--    Well hello there. If you are wondering I didn't use Bootstrap or other frameworks. Just css grid for screen widths +800px and flexbox for the smaller ones.-->
-<div id="menuBar" class="black-bg green-text">
-    <ul>
-        <li><a href="#who">Who</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#works">Works/Jobs</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<div id="open-nav" onclick=openMenu(this)>
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
 </div>
-<div id="mobileMenu" class="black-bg">
-    <button onclick="openMenu()"> &#9776;</button>
-</div>
-<div id="who" class="black-bg white-text slant-bottom">
-    <div></div>
-    <div>
-        <h1>Hi,<br>I'm Jani
-        </h1>
-        <h2> A "somewhat experienced" frontend developer</h2>
-    </div>
-</div>
-<div id="about">
-    <div class="about-text green-header">
-        <h1>Jani Laamanen</h1>
-        <p>
-                Student from Turku University of Applied Sciences, studying the field of Business IT. I'm intrested in frontend development as well as Information security, which will be my specialisation.
-        </p>
-    </div>
-    <div class="about-image">
-        <img src="img/kuva.jpg" alt="Jani Laamanen">
-    </div>
-    <div class="about-skills-header green-header">
-        <h1>Some of my skills</h1>
-    </div>
-    <div class="about-skills">
+<div id="container" class="row">
+    
+    <nav class="col-lg-2">
         <div>
-            <h1>Web development</h1>
             <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JQUERY</li>
-                <li>ColdFusion</li>
-                <li>SQL</li>
-                <li>WordPress</li>
+                <li class="Home active">Home</li>
+                <li class="About" >About</li>
+                <li class="Experience" >Experience</li>
+                <li class="Works" >Works</li>
             </ul>
         </div>
-        <div>
-            <h1>Software</h1>
-            <ul>
-                <li>Photoshop</li>
-                <li>InDesign</li>
-                <li>Illustrator</li>
-            </ul>
-        </div>
-    </div>
-</div>
+    </nav>
 
-<div id="works" class="black-bg slant-top green-header white-text">
-    <div class="works-jobs-header green-header">
-        <h1>Work exprerience</h1>
+    <div id="content" class="col-lg-8">
+        <div id="Home">
+            <div>
+                <h1 class="green-text"> Hi,<br>I'm Jani</h1>
+                <h2>A "somewhat experienced" frontend developer</h2>
+            </div>
+        </div>
+        <div id="About" class="row">
+            <div id="info" class="col-lg-8 col-md-8">
+                <h2 class="green-text">Jani Laamanen</h2>
+                <p>Student from Turku University of Applied Sciences, studying the field of Business IT. 
+                    I'm intrested in frontend development as well as Information security, which will be my specialisation.
+                </p>
+                <div id="skills" class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <h3 class="green-text">Skills</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JQUERY</li>
+                            <li>ColdFusion</li>
+                            <li>Wordpress</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <h3 class="green-text">Software</h3>
+                        <ul>
+                            <li>Photoshop</li>
+                            <li>InDesign</li>
+                            <li>Illustrator</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contact">
+                    <h3 class="green-text">Contact</h3>
+                    <ul>
+                        <li>jani.laamanen1@gmail.com</li>
+                        <li><a href="https://www.linkedin.com/in/jani-laamanen-583239150/">LinkedIn</a></li>
+                        <li><a href="https://github.com/jamisto">My Github</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="profile" class="col-lg-4 col-md-4">
+                <img src="./img/kuva.jpg" alt="profile image">
+                <div id="profile-bg"></div>
+            </div>
+        </div>
+        <div id="Experience">
+            <div id="exp">
+            </div>
+        </div>
+        <div id="Works">
+            <div class="jobs">
+                <div class="work row">
+                    <div class="work-img col-lg-3 col-md-3"><a href="TAY/index.html" target="_blank"><img src="./img/TAY18.png" alt="Taideakatemia1"/></a></div>
+                    <div class="work-info col-lg-9 col-md-9">
+                        <h2 class="green-text">Taideakatemian Yö 2018</h2>
+                        <p>Coded a website for their 2018 event.</p>
+                    </div>
+                </div>
+                <div class="work row">
+                    <div class="work-img col-lg-3 col-md-3"><a href="TAY19/index.html" target="_blank"><img src="./img/TAY19.jpg" alt="Taideakatemia2"/></a></div>
+                    <div class="work-info col-lg-9 col-md-9">
+                        <h2 class="green-text">Taideakatemian Yö 2019</h2>
+                        <p>Updated the website I had made for them the previous year.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="works-jobs">
-        <div id = "LähiRahoitus">
-            <h1>LähiRahoitus</h1>
-            <h2>Software Developer</h2>
-        </div>
-        <div id = "TUAS">
-            <h1>Turku University of Applied Sciences</h1>
-            <h2>Frontend developer</h2>
-        </div>
-        <div id = "Arts">
-            <h1>Turku Arts Academy</h1>
-            <h2>Frontend developer</h2>
-        </div>
-    </div>
-    <div class="works-header">
-        <h1>Some of my works</h1>
-    </div>
-    <div class="peon">
-        <div>
-            <h2>Taideakatemian Yö 2018</h2>
-            <a href="/TAY" target="_blank">
-                <img src="img/TAY18.png" alt="taideakatemianyo18">
-            </a>
-        </div>
-        <div>
-            <h2>Taideakatemian Yö 2019</h2>
-            <a href="/TAY19" target="_blank">
-                <img src="img/TAY19.jpg" alt="taideakatemianyo19">
-            </a>
-        </div>
-    </div>
-</div>
 
-<div id="contact" class="green-header">
-    <div class="contact-header">
-        <h1>Contact</h1>
-    </div>
-    <div class="contact-list">
-        <ul>
-            <li>jani.laamanen1@gmail.com</li>
-            <li><a href="https://www.linkedin.com/in/jani-laamanen-583239150/">LinkedIn</a></li>
-            <li><a href="https://github.com/jamisto">My Github</a></li>
-        </ul>
-    </div>
+
 </div>
 </body>
 </html>
