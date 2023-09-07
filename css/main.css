@@ -8,7 +8,7 @@
   }
 body{
     background: #0F0F0F;
-    min-width: 500px;
+    min-width: 354px;
 }
 
 #container{
@@ -115,7 +115,6 @@ nav li{
     margin-top:100px;
     min-height: 80vh;
     max-height: 80vh;
-    overflow: auto;
 }
 #carusel{
     width: 216px;
@@ -240,9 +239,7 @@ nav li{
     }
 }
 @media only screen and (max-width:768px){
-    body{
-        min-width:350px;
-    }
+    
     #profile{
         max-width:275px;
         order:-1;
