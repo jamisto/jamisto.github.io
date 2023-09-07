@@ -240,7 +240,9 @@ nav li{
     }
 }
 @media only screen and (max-width:768px){
-    
+    body{
+        min-width:350px;
+    }
     #profile{
         max-width:275px;
         order:-1;
