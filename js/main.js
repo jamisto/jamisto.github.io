@@ -80,8 +80,23 @@ function buildExperience(){
                 let description = $("<p>",{
                     class:"description"
                 }).text(data.jobs[job].times[index].description)
+                let highLights;
+                if(typeof data.jobs[job].times[index].highlights !== "undefined"){
+                    let highlightHolder = $("<ul>",{
+                        class:"highlight"
+                    });
+                    let highlightHeader = $("<p>",{
+                        class:"green-text"
+                    }).text("Projekteja")
+                    highlightHolder.append(highlightHeader)
+                    for(thing in data.jobs[job].times[index].highlights){
+                        let highlight = $("<li>").text( data.jobs[job].times[index].highlights[thing])
+                        highlightHolder.append(highlight)
+                    }
+                    highLights = highlightHolder
 
-                jobContainer.append(description);
+                }
+                jobContainer.append(description,highLights);
                 employerContainer.append(jobContainer);
             }
            $("#exp").append(employerContainer);

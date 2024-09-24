@@ -1,11 +1,13 @@
 { 
     "jobs": {
-        "TUAS":{ 
-            "employer":"Turku University of Applied Sciences",
+        "Noja Rahoitus":{
+            "employer":"Noja Rahoitus",
             "times":{
                 "1":{
-                    "title":"Front End Developer",
-                    "description":"Part of a information security and networking research team. I worked on a Azure based IoT data visualization system as a front end developer. A lot of HTML, CSS and Jquery."
+
+                    "title":"Software Developer",
+                    "time":"10.08.2020 - Present day",
+                    "description":"Maintaining and development of their internal systems. Having led multiple big projects to finish."
                 }
             }
         },
@@ -26,14 +28,12 @@
             }
         
         },
-        "Noja Rahoitus":{
-            "employer":"Noja Rahoitus",
+        "TUAS":{ 
+            "employer":"Turku University of Applied Sciences",
             "times":{
                 "1":{
-
-                    "title":"Software Developer",
-                    "time":"10.08.2020 - Present day",
-                    "description":"Maintaining and development of their internal systems. Having led multiple big projects to finish."
+                    "title":"Front End Developer",
+                    "description":"Part of a information security and networking research team. I worked on a Azure based IoT data visualization system as a front end developer. A lot of HTML, CSS and Jquery."
                 }
             }
         },
